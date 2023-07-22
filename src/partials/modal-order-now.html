@@ -1,0 +1,68 @@
+<div class="backdrop-order-now is-hidden" data-modal>
+  <div class="modal-order-now">
+    <button type="button" class="modal-order-now-close-btn" data-modal-close>
+      x
+      <svg>
+        <use></use>
+      </svg>
+    </button>
+
+    <h2 class="modal-order-now-title">Order now</h2>
+
+    <form class="modal-order-now-form">
+      <label class="modal-order-now-form-lable-field">
+        <span class="modal-order-now-form-input-description">Name</span>
+        <span class="modal-order-now-form-wrapper">
+          <input
+            type="text"
+            name="user_name"
+            class="modal-order-now-form-input"
+            required
+            pattern="^[a-zA-Zа-яА-ЯіІїЇ]+$"
+            minlength="2"
+            title="minimum 2 letters"
+          />
+        </span>
+      </label>
+
+      <label class="modal-order-now-form-lable-field">
+        <span class="modal-order-now-form-input-description">Phone number</span>
+        <span class="modal-order-now-form-wrapper">
+          <input
+            type="tel"
+            name="user-phone"
+            class="modal-order-now-form-input"
+            required
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+            title="xxx-xxx-xx-xx"
+          />
+        </span>
+      </label>
+
+      <label class="modal-order-now-form-lable-field">
+        <span class="modal-order-now-form-input-description">Email</span>
+        <span class="modal-order-now-form-wrapper">
+          <input
+            type="email"
+            name="user-email"
+            class="modal-order-now-form-input"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$"
+            required
+            maxlength="29"
+            title="user@mail.com"
+          />
+        </span>
+      </label>
+
+      <label class="modal-order-now-form-lable-field">
+        <span class="modal-order-now-form-input-description">Comment</span>
+        <textarea
+          name="user-massage"
+          class="modal-order-now-form-message"
+        ></textarea>
+      </label>
+
+      <button type="submit" class="modal-order-now-form-submit">Send</button>
+    </form>
+  </div>
+</div>
