@@ -1,0 +1,24 @@
+.popular {
+    width: 400px;
+    height: 700px;
+    border: solid 2px tomato;
+    background-color: #dee26c;
+}
+
+.popular-list {
+  margin: 0;
+  list-style: none;
+  padding: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-around; */
+  grid-gap: 30px;
+}
+
+.gallery_card {
+    display: flex;
+}
+
+.gallery_info {
+    display: flex;
+}
