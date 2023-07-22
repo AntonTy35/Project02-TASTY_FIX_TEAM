@@ -1,0 +1,76 @@
+/* ---------------mobail------------ */
+@media screen and (min-width: 320px) {
+  .all-categories-btn {
+    width: 176px;
+    height: 50px;
+    background-color: #ffff;
+    margin-bottom: 24px;
+    cursor: pointer;
+    color: rgba(5, 5, 5, 0.5);
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 14px 28px;
+    border-radius: 15px;
+    border: 1px solid rgba(5, 5, 5, 0.2);
+    margin-left: 20px;
+  }
+
+  .btn.btn-active {
+    background-color: rgba(155, 181, 55, 1);
+    border: 1px solid rgba(155, 181, 55, 1);
+    color: rgba(248, 248, 248, 1);
+  }
+
+  .all-categories-list {
+    display: flex;
+    width: 326px;
+    height: 210px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    overflow-y: scroll;
+  }
+  .all-categories-item-btn:hover,
+  :focus {
+    color: rgba(155, 181, 55, 1);
+  }
+
+  .all-categories-item-btn {
+    border: none;
+    background: none;
+    color: rgba(5, 5, 5, 0.3);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: calc(18 / 14);
+    cursor: pointer;
+  }
+}
+/* --------------tablet-------------- */
+@media screen and (min-width: 768px) {
+  .all-categories-list {
+    height: 416px;
+    gap: 24px;
+  }
+  .all-categories-btn {
+    margin-bottom: 30px;
+  }
+
+  .all-categiries-list-container {
+    width: 176px;
+    height: 416px;
+  }
+}
+
+/* ------------desktop---------------- */
+
+@media screen and (min-width: 1280px) {
+  .all-categories-btn {
+    margin-bottom: 42px;
+  }
+
+  .all-categiries-list-container {
+    width: 235px;
+    height: 416px;
+  }
+}
