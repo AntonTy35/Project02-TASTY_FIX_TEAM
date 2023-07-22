@@ -9,24 +9,3 @@
 @import url('./modal-order-now.css');
 @import url('./menu-heroCard-categories-favorites.css');
 @import url('./cards-pagination-favorites.css');
-
-:root {
-  font-family: Inter, sans-serif;
-  font-size: 14px;
-  line-height: 1.2;
-  font-weight: 500;
-  letter-spacing: -0.02em;
-
-  --primary-text-color: #fff;
-
-  --primary-text-color-05: rgba(5, 5, 5, 0.5);
-
-  --primary-text-color-02: rgba(5, 5, 5, 0.2);
-  --primary-text-color-01: rgba(5, 5, 5, 1);
-
-  --primary-color-btn: #9bb537;
-
-  --bgc-background: #161616;
-  --bgc-background-mob-menu: #050505;
-  --border-paginatio: rgba(255, 255, 255, 0.3);
-}

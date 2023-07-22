@@ -1,6 +1,6 @@
 /* ---------------mobail------------ */
 @media screen and (min-width: 320px) {
-  /* .all-categories {
+  .all-categories {
     max-height: 402px;
     margin-bottom: 40px;
   }
@@ -45,7 +45,7 @@
     flex-direction: column;
     gap: 18px;
     overflow-y: scroll;
-  } */
+  }
   /* -----------JS--------------- */
   /* .category-btn {
     border: none;
