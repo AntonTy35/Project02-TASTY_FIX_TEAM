@@ -1,0 +1,113 @@
+/* ---------------mobail------------ */
+@media screen and (min-width: 320px) {
+  /* .all-categories {
+    max-height: 402px;
+    margin-bottom: 40px;
+  }
+
+  .all-categories-button {
+    width: 176px;
+    height: 50px;
+    background-color: var(--primary-text-color);
+    margin-bottom: 24px;
+    cursor: pointer;
+
+    transition: var(--trns-general);
+
+    color: var(--primary-text-color-05);
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.29;
+    padding: 14px 28px;
+    border-radius: 15px;
+    border: 1px solid var(--primary-text-color-02);
+  }
+
+  .all-categories-button:hover,
+  :focus {
+    background-color: var(--primary-color-btn);
+    color: var(--primary-text-color);
+    border: 1px solid var(--primary-color-btn);
+  }
+
+  .all-categories-button.active {
+    border: 1px solid var(--primary-color-btn);
+    background-color: var(--primary-color-btn);
+    color: var(--primary-text-color);
+  }
+
+  .category-list {
+    width: 326px;
+    height: 198px;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 18px;
+    overflow-y: scroll;
+  } */
+  /* -----------JS--------------- */
+  /* .category-btn {
+    border: none;
+    background-color: transparent;
+    color: var(--gray-ul-w);
+    font-size: 14px;
+    font-weight: 500;
+    font-family: var(--main-font);
+    cursor: pointer;
+    padding: 0;
+    transition: var(--trns-general);
+    @media screen and (min-width: 768px) {
+      font-size: 16px;
+    }
+  }
+
+  .category-btn:hover {
+    color: var(--primary-color-btn);
+  }
+
+  .category-btn.active {
+    color: var(--primary-color-btn);
+  }
+  .onFocus {
+    color: var(--primary-color-btn);
+    background-color: var(--primary-color-btn);
+  } */
+}
+/* --------------tablet-------------- */
+@media screen and (min-width: 768px) {
+  .all-categories {
+    max-width: 176px;
+    max-height: 50px;
+
+    margin-bottom: 0;
+  }
+
+  .all-categories-button {
+    margin-bottom: 30px;
+  }
+
+  .category-list {
+    width: 176px;
+    height: 416px;
+    gap: 24px;
+  }
+}
+
+/* ------------desktop---------------- */
+
+@media screen and (min-width: 1280px) {
+  /* .all-categories {
+    max-width: 174px;
+    max-height: 50px;
+  } */
+
+  .all-categories-button {
+    /* width: 174px; */
+    margin-bottom: 42px;
+  }
+
+  .category-list {
+    width: 235px;
+  }
+}
