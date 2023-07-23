@@ -1,5 +1,11 @@
 import axios from 'axios';
+import "simplelightbox/dist/simple-lightbox.min.css"; 
+import SimpleLightbox from 'simplelightbox'; 
 
+
+const lightbox = new SimpleLightbox('.popular a', {
+  captionsData: 'alt', captionPosition: 'bottom', captionDelay: 250 , scaleImageToRatio: true , heightRatio: 0.8 , widthRatio: 0.9
+});
 const popularList = document.querySelector(".popular-list");
 console.log(0, popularList); 
 const BASE_URL = 'https://tasty-treats-backend.p.goit.global/api/recipes/popular';
@@ -18,7 +24,7 @@ function renderPopularList(response) {
     console.log("1 - response", response); 
     console.log("1.1 - popularList", popularList);
   popularList.innerHTML = createPopularGalleryCards(response);
-//   lightbox.refresh();
+  lightbox.refresh();
 //   btnLoadMore.style.display = 'block';
     
 }
@@ -32,12 +38,12 @@ function createPopularGalleryCards(response) {
         // console.log(`3-  response: `, whatnot.preview);
         return `<div class="gallery_card">
           <a class="gallery_info" href="${whatnot.preview}">
-            <img class="gallery_image" src="${whatnot.preview}"" alt="" width="48" height="48">
+            <img class="gallery_image" src="${whatnot.preview}" alt="${whatnot.title}" width="48" height="48">
           </a>
               <div class="gallery_list">
-                 <p class="gallery_item"><b class="gallery_item_info">#id </b>${whatnot._id}"</p>
-                 <p class="gallery_item"><b class="gallery_item_info">Title </b>${whatnot.title}"</p>
-                 <p class="gallery_item"><b class="gallery_item_info">Popularity </b>${whatnot.popularity}"</p>          
+                 <p class="gallery_item"><b class="gallery_item_info">#id </b>${whatnot._id}</p>
+                 <p class="gallery_item"><b class="gallery_item_info">Title </b>${whatnot.title}</p>
+                 <p class="gallery_item"><b class="gallery_item_info">Popularity </b>${whatnot.popularity}</p>          
               </div>          
         </div>`;
     })
