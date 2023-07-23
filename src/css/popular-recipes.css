@@ -1,8 +1,54 @@
+@import url('./common.css');
+
+/* спінер */
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  transition: opacity 0.75s, visibility 0.75s;
+}
+
+.loader--hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 15px solid var(--primary-color-btn);
+  border-top-color: var(--bgc-background);
+  border-radius: 50%;
+  animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+/*  -------- спінер --------- */
+
 .popular {
-    width: 400px;
-    height: 700px;
-    border: solid 2px tomato;
-    background-color: #dee26c;
+    display: flex;
+    width: 380px;
+    height: 480px;
+    /* background-color: #dee26c; */
+    background-color: var(--primary-color-btn) ;
+    border: 2px solid tomato;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .popular-list {
@@ -22,3 +68,29 @@
 .gallery_info {
     display: flex;
 }
+
+/* .gallery_info:hover {
+    display: flex;
+} */
+
+.gallery_image {
+    width: 48px;
+    height: 48px;
+}
+
+.gallery_image:hover {
+    width: 168px;
+    height: 168px;
+}
+
+/* .gallery_list {
+
+} */
+
+/* .gallery_item {
+
+} */
+
+/* .gallery_item_info {
+
+} */
