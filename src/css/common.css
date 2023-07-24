@@ -17,6 +17,8 @@
     --bgc-background: #161616;
     --bgc-background-mob-menu: #050505;
     --border-paginatio: rgba(5, 5, 5, 0.3);
+
+    --transition-dur-func-btn-hover: 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
 img {
