@@ -1,13 +1,3 @@
-// requirejs.config({
-//   paths: {
-//     jQuery: 'vendor/jquery',
-//   },
-// });
-
-// let $ = require(['jQuery'], function (jQuery) {
-//   log(jQuery); // working
-// });
-
 let $ = require('jquery');
 
 // Налаштування слайдеру
