@@ -67,25 +67,6 @@
   border: 1px solid var(--primary-color-btn);
 }
 
-@media screen and (min-width: 768px) {
- 
-  .hero-container{
-    max-width: 744px;
-  }
-  .hero-wrapper{
-    max-width: 446px;
-  }
-  .hero-title {
-    font-size: 36px;
-  }
-  .hero-text{
-    width: 408px;
-    font-size: 16px;
-    line-height: 24px;
-  }
-
-}
-
 /* Слайдер */
 .slider {
   width: 355px;
@@ -129,10 +110,10 @@
 }
 
 .slider-item-topic .description {
-  width: 144px;
+  width: 257px;
   position: absolute;
   left: 50%;
-  top: 84%;
+  top: 88%;
   transform: translate(-50%, -50%);
   color: rgba(248, 248, 248, 0.6);
   text-align: center;
@@ -227,6 +208,20 @@
 
 
 @media screen and (min-width: 768px){
+  .hero-container{
+    max-width: 744px;
+  }
+  .hero-wrapper{
+    max-width: 446px;
+  }
+  .hero-title {
+    font-size: 36px;
+  }
+  .hero-text{
+    width: 408px;
+    font-size: 16px;
+    line-height: 24px;
+  }
   .slider {
     width: 736px;
   }
