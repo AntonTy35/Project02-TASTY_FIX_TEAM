@@ -1,0 +1,2 @@
+const e=document.querySelector(".button-burger"),t=document.getElementById("mobileMenu"),o=document.querySelector(".button-close");e.addEventListener("click",(()=>{t.classList.add("show-mob")})),o.addEventListener("click",(()=>{t.classList.remove("show-mob")}));const c=window.location.href;document.querySelectorAll(".nav-list").forEach((e=>{const t=e.querySelector("a").href;c===t?e.classList.add("active"):e.classList.remove("active")}));
+//# sourceMappingURL=favorites.b9ef3ca8.js.map
