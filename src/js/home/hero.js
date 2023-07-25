@@ -1,3 +1,13 @@
+// requirejs.config({
+//   paths: {
+//     jQuery: 'vendor/jquery',
+//   },
+// });
+
+// let $ = require(['jQuery'], function (jQuery) {
+//   log(jQuery); // working
+// });
+
 let $ = require('jquery');
 
 // Налаштування слайдеру
@@ -21,10 +31,11 @@ const refs = {
   slider: document.querySelector('.slider'),
 };
 
-
 async function fetchEvents() {
   try {
-    let response = await fetch('https://tasty-treats-backend.p.goit.global/api/events');
+    let response = await fetch(
+      'https://tasty-treats-backend.p.goit.global/api/events'
+    );
     let arrEvents = await response.json();
     return arrEvents;
   } catch (error) {
