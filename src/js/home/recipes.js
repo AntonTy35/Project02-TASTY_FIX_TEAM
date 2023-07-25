@@ -17,13 +17,13 @@ async function recipesFetch() {
     .then(obj => {
       //   console.log(obj);
       console.log('obj.results', obj.results);
-      recipes.innerHTML = recipesMarkup(obj.results);
+      // recipes.innerHTML = recipesMarkup(obj.results);
       recipes.insertAdjacentHTML('beforeend', recipesMarkup(obj.results));
     })
     .catch(err => console.log(err));
 }
 
-recipesFetch();
+// recipesFetch();
 
 function recipesMarkup(arr) {
   return arr
