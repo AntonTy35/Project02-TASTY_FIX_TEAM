@@ -1,0 +1,17 @@
+.filter-bar-input {
+  position: relative;
+  display: inline-block;
+}
+.filter-bar-input-search {
+  padding-left: 30px;
+}
+
+.filter-bar-input-search-icon {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: #050505;
+}
