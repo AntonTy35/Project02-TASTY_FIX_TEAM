@@ -1,7 +1,7 @@
-import Notiflix from 'notiflix';
+// import Notiflix from 'notiflix';
 import axios from 'axios';
-import SimpleLightbox from 'simplelightbox';
-// import { isValidEmail } from './orderForm';
+// import SimpleLightbox from 'simplelightbox';
+// // import { isValidEmail } from './orderForm';
 
 export async function findRecipes(id) {
   const url = `https://tasty-treats-backend.p.goit.global/api/recipes/${id}`;
