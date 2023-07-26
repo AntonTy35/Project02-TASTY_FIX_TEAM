@@ -1,1 +1,187 @@
+.is-hidden-modal-order-now {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
 
+.backdrop-order-now {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 47, 66, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: scroll;
+  transition-property: opacity, visibility, transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  z-index: 100;
+}
+
+.modal-order-now {
+  width: 335px;
+  min-height: 526px;
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  border-radius: 15px;
+  padding: 28px 20px;
+}
+
+.modal-order-now-close-btn {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 14px;
+  right: 14px;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  border-color: transparent;
+  background-color: transparent;
+  fill: rgba(17, 17, 17, 1);
+  cursor: pointer;
+}
+
+.modal-order-now-title {
+  margin: 0;
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.22;
+  text-transform: uppercase;
+  color: #050505;
+}
+
+.modal-order-now-form {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  row-gap: 16px;
+}
+
+.modal-order-now-form-lable-field {
+  position: relative;
+}
+
+.modal-order-now-form-input-description {
+  display: block;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.29;
+  color: rgba(5, 5, 5, 0.5);
+}
+
+.modal-order-now-form-input {
+  margin-top: 8px;
+  width: 100%;
+  height: 46px;
+  padding: 14px 18px;
+  border: 1px solid rgba(5, 5, 5, 0.2);
+  border-radius: 15px;
+  background: transparent;
+}
+
+.modal-order-now-form-input:focus,
+.modal-order-now-form-message:focus {
+  outline: none;
+  border: 2px solid #9bb537;
+}
+
+.modal-order-now-form-message {
+  resize: none;
+  margin-top: 8px;
+  width: 100%;
+  min-height: 100px;
+  padding: 14px 18px;
+  border: 1px solid rgba(5, 5, 5, 0.2);
+  border-radius: 15px;
+  background: transparent;
+}
+
+.modal-order-now-form-submit {
+  margin-top: 24px;
+  width: 100%;
+  align-self: center;
+  padding: 15px 10px;
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: normal;
+  color: #f8f8f8;
+  background-color: #9bb537;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .modal-order-now {
+    width: 440px;
+    min-height: 552px;
+    padding: 40px 40px;
+  }
+
+  .modal-order-now-close-btn {
+    top: 16px;
+    right: 16px;
+    width: 24px;
+    height: 24px;
+  }
+
+  .modal-order-now-form {
+    margin-top: 40px;
+    row-gap: 18px;
+  }
+
+  .modal-order-now-form-input {
+    width: 100%;
+    height: 48px;
+  }
+}
+
+/* Стилі темної теми */
+body.dark-theme {
+  background-color: #050505;
+  color: #f8f8f8;
+}
+
+.dark-theme .backdrop-order-now {
+  background-color: rgba(46, 47, 66, 0.8);
+}
+
+.dark-theme .modal-order-now {
+  background: #1c1c1c;
+  color: #f8f8f8;
+  border-color: #f8f8f8;
+}
+
+.dark-theme .modal-order-now-close-btn {
+  fill: rgba(255, 255, 255, 1);
+}
+
+.dark-theme .modal-order-now-title {
+  color: rgba(255, 255, 255, 1);
+}
+
+.dark-theme .modal-order-now-form-input-description {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.dark-theme .modal-order-now-form-input,
+.dark-theme .modal-order-now-form-message {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 1);
+}
+
+.dark-theme .modal-order-now-form-input:focus,
+.dark-theme .modal-order-now-form-message:focus {
+  outline: none;
+  border: 2px solid #9bb537;
+}
