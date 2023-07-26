@@ -28,13 +28,19 @@ async function recipesFetch() {
 function recipesMarkup(arr) {
   return arr
     .map(
-      ({ title, thumb }) => `<li>
-        <img src="${thumb}" alt="${title}" width="150">
-        <button type="button">heart</button>
-        <h2>${title}</h2>
-        <p>description</p>
-        <p>rating</p>
-        <button type="button">See recipe</button>
+      ({ title, thumb, description }) => `<li>
+      <div id="text_from_above">
+        <img class="recipes_img" src="${thumb}" alt="${title}" width="240" height="264">
+          <div class="text_from_above">
+              <button type="button">heart</button>
+                <div class="text_from_above_title">
+              <h2 class="recipes_title">${title}</h2>
+              <p class="recipes_description">${description}</p>
+              <p class="recipes_rating">rating</p>
+                </div>
+              <button type="button">See recipe</button>
+          <div>
+      <div>
     </li>`
     )
     .join('');
