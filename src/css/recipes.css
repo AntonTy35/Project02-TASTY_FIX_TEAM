@@ -1,3 +1,5 @@
+/* @import url('./common.css'); */
+
 .popular_on_recipes {
     display: flex;
     width: 960px;
@@ -32,15 +34,35 @@ position: relative;
 }
 
 .text_from_above {
+height: 220px;
 position: absolute;
-top: 48%;
+top: 5%;
 left: 10px;
-text-transform: uppercase;
+/* text-transform: uppercase; */
 color: white;
-/* width: 350px; */
 background: transparent;
 padding: 10px;
 text-align: end;
+}
+
+.recipes_button_heart_from_above {
+  padding-bottom: 80px;
+}
+
+.recipes_button_heart {
+  border: none;
+  background-color: rgb(220, 187, 187);
+  gap: 14px;
+  width: 28px;
+  height: 24px;
+  cursor: pointer;
+  color: #000;
+}
+
+.recipes_icon_heart {
+  /* margin-right: 14px; */
+  stroke: #000;
+  /* fill: currentColor; */
 }
 
 .text_from_above_title {
@@ -51,12 +73,11 @@ text-align: end;
   border-radius: 15px;
 }
 
-.recipes_title {
-  align-content: center;
+.recipes_title {  
   width: 180px;
   height: 18px;
    color: #F8F8F8;
-   text-align: center;
+   text-align: left;
    font-family: Inter;
    font-size: 14px;
    /* font-style: normal; */
@@ -69,7 +90,7 @@ text-align: end;
 } 
 
 .recipes_description {
-  align-content: center;
+  text-align: left;
    width: 208px;
    height: 32px;
    overflow: hidden;
@@ -95,3 +116,56 @@ text-align: end;
    line-height: 1.33; 
 
 }
+
+.recipes_btn {
+  display: flex;
+  align-items: center;
+  width: 218px;
+  height: 31px;
+  justify-content: flex-end;
+}
+
+.recipes_btn_reting {
+  text-align: left;
+   width: 116px;
+  height: 18px;
+  align-content: center;
+  font-size: 24px;
+}
+
+.recipes_btn_see_recipe {
+    width: 93px;
+    height: 31px;
+    background-color: var(--primary-color-btn);
+    margin-bottom: 16px;
+    margin-right: 8px;
+    cursor: pointer;
+    color: var(--primary-text-color-05);
+    
+    border-radius: 15px;
+    border: 1px solid var(--primary-text-color-02);
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .recipes_btn_see_recipe:hover {
+     background-color: #73891a;
+     color: #F8F8F8;
+  }
+
+  .recipes_simple_reting {
+     /* position: relative; */
+     font-size: 40px;
+     display: inline-block;
+  }
+
+  .recipes_simple_reting::before {
+    position: absolute;
+  content: "*****";
+  display: block;
+  top: 85%;
+  left: 0;
+  }
