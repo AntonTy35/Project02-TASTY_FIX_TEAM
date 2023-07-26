@@ -5,7 +5,7 @@ import { getFavoritesRecipes } from './data';
 mobile = true;
 BASE_URL = 'https://tasty-treats-backend.p.goit.global/api';
 currentPage = 1;
-pageSize = mobile ? 6 : 12;
+pageSize = mobile ? 8 : 9;
 
 getFavoritesRecipes();
 
