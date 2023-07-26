@@ -10,7 +10,7 @@
   visibility: hidden;
   opacity: 0;
 
-  background: rgba(0, 0, 0, 0.2);
+  background: #ffffff;
   transition: opacity 500ms ease, visibility 500ms ease;
 }
 
@@ -74,7 +74,7 @@
   stroke: var(--main-color);
 }
 .rating__value.detail {
-  color: var(--primary-text-CH-color-RATING-modal);
+  color: #828282;
 }
 .btn-add {
   width: 133px;
@@ -82,12 +82,18 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 1.21;
-  border: 1px solid var(--main-color);
+  border: 1px solid #f8f8f8;
   border-radius: 15px;
   cursor: pointer;
-  background-color: var(--main-color);
-  color: var(--light-text-color);
+  background-color: #9bb537;
+  color: #f8f8f8;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.rating-btn {
+  background-color: #f8f8f8;
+  border: 1px solid #9bb537;
+  color: black;
 }
 
 .btn-add:hover,
@@ -162,7 +168,7 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 1.28;
-  color: var(--primary-text-CH-color-05);
+  color: #828282;
 }
 
 .table-border {
@@ -215,12 +221,13 @@
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
+  list-style: none;
 }
 .hashtags {
   font-family: 'Inter', sans-serif;
   font-weight: 500;
   font-size: 12px;
-  border: 1px solid var(--switch-color);
+  border: 1px solid #828282;
   border-radius: 35px;
   padding: 8px 16px;
   cursor: pointer;
@@ -275,6 +282,11 @@
   height: 295px;
   object-fit: cover;
   border-radius: 8px;
+}
+
+.recipes-subtitle {
+  border-bottom: 1px solid maroon;
+  border-color: #828282;
 }
 .recipes-information {
   margin-top: 20px;

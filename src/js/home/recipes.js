@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+import { finallInitPage } from '../modal-banana-pancakes';
+
 const recipes = document.querySelector('.recipes-js');
 
 const BASE_URL = 'https://tasty-treats-backend.p.goit.global/api';
@@ -35,7 +37,7 @@ function recipesMarkup(arr) {
               <p class="recipes_rating">rating</p>
                 </div>
                 
-              <button type="button">See recipe</button>              
+              <button type="button" class="btn btn-primary cards__btn item-rec see-recipe-btn">See recipe</button>              
               
               <div>
               <div>
@@ -43,3 +45,9 @@ function recipesMarkup(arr) {
     )
     .join('');
 }
+recipes.addEventListener('click', event => {
+  const targetBtn = event.target;
+  if (targetBtn.classList.contains('see-recipe-btn')) {
+    finallInitPage(targetBtn);
+  }
+});

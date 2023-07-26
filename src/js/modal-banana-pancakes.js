@@ -1,4 +1,4 @@
-// import { markUpRating } from './ratings';
+// import { markUpRating } from './modal-rating';
 // import localctorage from './localctorage';
 // import { KEY } from './addToFavorites';
 // import { addToFavorites, removeFromFavorites } from './addToFavorites';
@@ -26,11 +26,12 @@ let refs = {
 
 let recipeId;
 // Запуск по кліку
-// setTimeout(() => {
-//   finallInitPage('6462a8f74c3d0ddd28897fc1');
-// }, 2000)
+setTimeout(() => {
+  finallInitPage('6462a8f74c3d0ddd28897fc1');
+}, 2000);
 
 // /** Відкриття та закриття модального вікна */
+
 refs.closeBtn.addEventListener('click', closeModalClose);
 refs.backdropRecipe.addEventListener('click', clickBackdropClick);
 function openModalOpen() {
@@ -64,10 +65,10 @@ function onEscPress(e) {
 
 export function finallInitPage(id) {
   fetchRecipeById(id).then(data => {
-    isFavorite(data._id);
+    // isFavorite(data._id);
     renderVIDEO(data);
     renderRanting(data);
-    markUpRating();
+    // markUpRating();
     renderIngridient(data);
     renderHashtags(data);
     renderText(data);
@@ -110,6 +111,8 @@ function getKeyYouTybe(url) {
   let key = url.split('').splice(32, indexLast).join('');
   return key;
 }
+
+// "youtube":"https://www.youtube.com/watch?v=e52IL8zYmaE"
 function renderVIDEO(data) {
   const markUp = `
    <iframe
@@ -117,7 +120,7 @@ function renderVIDEO(data) {
                 height="100%"
                 src="https://www.youtube.com/embed/${getKeyYouTybe(
                   data.youtube
-                )}?origin=https://mrcolti4.github.io"
+                )}?origin=AntonTy35.github.io"
 
 title = "YouTube video player"
 frameborder = "0"
@@ -199,6 +202,59 @@ function renderText(data) {
   refs.textContentBox.textContent = data.instructions;
   refs.time.textContent = data.time + ' min';
 }
+
+export function AddToFav({ target }) {
+  const storage = localStorage.getItem('favorites');
+  const data = JSON.parse(storage);
+  const currentRec = JSON.parse(refs.modalRecipes.dataset.info);
+  if (storage) {
+    if (data.find(el => el.id === currentRec.id)) {
+      localStorage.setItem(
+        'favorites',
+        JSON.stringify([...data.filter(el => el.id !== currentRec.id)])
+      );
+      target.textContent = 'Add to favorite';
+    } else {
+      localStorage.setItem('favorites', JSON.stringify([...data, currentRec]));
+      target.textContent = 'Remove favorite';
+    }
+  } else {
+    localStorage.setItem('favorites', JSON.stringify([currentRec]));
+    target.textContent = 'Remove favorite';
+  }
+
+  // const seeRecipeButtons = document.querySelectorAll('.item-rec');
+  // seeRecipeButtons.forEach(seeRecipeButton => {
+  //   seeRecipeButton.addEventListener('click', () => {
+  //     const recipeId = seeRecipeButton.dataset.id;
+  //     OpenModal(seeRecipeButton);
+  //   });
+  // });
+}
+// export function OpenModal(currentBtn) {
+//   refs.closeBtn.addEventListener('click', closeModalClose);
+//   refs.backdropRecipe.addEventListener('click', clickBackdropClick);
+//   // refs.giveRatingBtn.addEventListener('click', OpenRateModal);
+//   window.addEventListener('keydown', onEscPress);
+
+//   refs.backdropRecipe.classList.remove('is-hidden-modal');
+//   refs.modalRecipe.classList.remove('is-hidden-modal');
+//   // refs.rateForm.dataset.id = currentBtn.dataset.id;
+//   finallInitPage(currentBtn.dataset.id);
+
+//   const storage = localStorage.getItem('favorites');
+//   const data = JSON.parse(storage);
+
+//   if (storage) {
+//     if (data.find(el => el.id === currentBtn.dataset.id)) {
+//       refs.saveRecipeBtn.textContent = 'Remove favorite';
+//     } else {
+//       refs.saveRecipeBtn.textContent = 'Add to favorite';
+//     }
+//   }
+
+//   refs.addToFavoriteBtn.addEventListener('click', AddToFav);
+// }
 
 // Реалізцація кнопок додавання та видалення з блоку favorites
 // refs.addToFavoriteBtn.addEventListener('click', onAddToFavClick);
