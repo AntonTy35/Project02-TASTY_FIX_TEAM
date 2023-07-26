@@ -132,3 +132,23 @@
 .filter-bar-label:not(:last-child) {
   margin-bottom: 8px;
 }
+.filter-bar-icon-reset {
+  width: 16px;
+  height: 16px;
+  fill: #9bb537;
+}
+.filter-bar-btn-reset {
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
+}
+.filter-bar-btn-reset-description {
+  margin-left: 4px;
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  color: rgba(5, 5, 5, 0.5);
+}
+.filter-bar-btn-reset-content {
+  display: flex;
+  align-items: center; /* Вирівнюємо дочірні елементи по вертикалі */
+}
