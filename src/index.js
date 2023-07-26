@@ -10,4 +10,3 @@ import './js/home/pagination';
 import './js/modal-banana-pancakes';
 import './js/modal-rating';
 import './js/modal-order-now';
-import './js/home/scroll-up';
