@@ -20,11 +20,17 @@
 <body>
   <include src="./partials/header.html"></include>
   <main>
+
     <section class="favor-section">
       <ul class="favor-list" id="favorList"></ul>
     </section>
+   
+    <include src="./partials/menu-heroCard-categories-favorites.html"></include>
+    <include src="./partials/cards-pagination-favorites.html"></include>
+  
   </main>
-  <nav>
+ 
+  <!-- <nav>
     <ul class="pagination">
       <li class="page-item">
         <button class="page-link" id="prevButton">Previous</button>
@@ -33,8 +39,12 @@
         <button class="page-link" id="nextButton">Next</button>
       </li>
     </ul>
-  </nav>
+  </nav> -->
+
+  <include src="./partials/modal-rating.html"></include>
+ 
   <script type="module" src="./favorites.js"></script>
+
 </body>
 
 </html>
