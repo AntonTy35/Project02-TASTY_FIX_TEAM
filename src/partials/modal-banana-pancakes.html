@@ -1,0 +1,97 @@
+<div class="backdrop-recipes is-hidden-modal">
+  <div id="scroll-rec" class="modal-recipes is-hidden-modal">
+    <div class="modal-recipes-js"></div>
+    <button class="close-modal">
+      <!-- <svg class="close-modal-ico" width="20" height="20">
+        <use href="./images/sprite.svg#icon-x"></use>
+      </svg> -->
+    </button>
+    <div class="scroll-box"></div>
+    <button class="save-recipes-btn">Add to favorite</button>
+    <button class="give-rating-btn">Give a rating</button>
+  </div>
+
+  <div class="modal-rating is-hidden-modal backdrop-rating" data-modal>
+    <button class="modal-rating-close-btn close-rating-modal" data-modal-close>
+      <!-- <svg class="modal-rating-close-icon" width="24" hight="24">
+        <use href="./images/sprite.svg#icon-x"></use>
+      </svg> -->
+    </button>
+    <b class="modal-rating-title">Rating</b>
+    <div class="modal-rating-star-box">
+      <ul class="modal-rating-list">
+        <li class="modal-rating-star-item">
+          <button type="button" class="modal-rating-star-btn">
+            <!-- <svg class="modal-rating-star-icon" width="24" height="24">
+              <use href="./images/sprite.svg#star"></use>
+            </svg> -->
+          </button>
+        </li>
+        <li class="modal-rating-star-item">
+          <button type="button" class="modal-rating-star-btn">
+            <!-- <svg class="modal-rating-star-icon" width="24" height="24">
+              <use href="./images/sprite.svg#star"></use>
+            </svg> -->
+          </button>
+        </li>
+        <li class="modal-rating-star-item">
+          <button type="button" class="modal-rating-star-btn">
+            <!-- <svg class="modal-rating-star-icon" width="24" height="24">
+              <use href="./images/sprite.svg#star"></use>
+            </svg> -->
+          </button>
+        </li>
+        <li class="modal-rating-star-item">
+          <button type="button" class="modal-rating-star-btn">
+            <!-- <svg class="modal-rating-star-icon" width="24" height="24">
+              <use href="./images/sprite.svg#star"></use>
+            </svg> -->
+          </button>
+        </li>
+        <li class="modal-rating-star-item">
+          <button type="button" class="modal-rating-star-btn">
+            <!-- <svg class="modal-rating-star-icon" width="24" height="24">
+              <use href="./images/sprite.svg#star"></use>
+            </svg> -->
+          </button>
+        </li>
+        <li class="modal-rating-star-item">
+          <button type="button" class="modal-rating-star-item">
+            <!-- <svg class="modal-rating-star-icon" width="24" height="24">
+                    <use href="./images/sprite.svg#star"></use>
+                </svg> -->
+          </button>
+        </li>
+      </ul>
+      <form class="modal-rating-form">
+        <label class="modal-rating-formfield">
+          <span class="modal-rating-span">0.0</span>
+          <input
+            type="range"
+            name="raiting-star"
+            min="0"
+            max="5"
+            value="0"
+            class="rating-range-input"
+          />
+        </label>
+        <label class="modal-rating-formfield">
+          <input
+            type="text"
+            name="email"
+            placeholder="Enter email"
+            class="rating-email-input"
+          />
+        </label>
+        <button
+          class="modal-rating-send-btn"
+          type="submit"
+          name="send"
+          disabled="true"
+        >
+          Send
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
