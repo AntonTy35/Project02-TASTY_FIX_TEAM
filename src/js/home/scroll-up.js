@@ -1,7 +1,7 @@
 const scrollUpButton = document.querySelector('.scroll-up-btn');
 
 function toggleScrollUpButton() {
-  if (document.documentElement.scrollTop > 100) {
+  if (document.documentElement.scrollTop > 200) {
     scrollUpButton.style.display = 'block';
   } else {
     scrollUpButton.style.display = 'none';
