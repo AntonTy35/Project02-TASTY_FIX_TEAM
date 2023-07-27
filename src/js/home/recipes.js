@@ -4,8 +4,8 @@ const recipes = document.querySelector('.recipes-js');
 
 const BASE_URL = 'https://tasty-treats-backend.p.goit.global/api';
 
-async function recipesFetch() {
-  return await fetch(`${BASE_URL}/recipes?limit=9`)
+export async function recipesFetch(query) {
+  return await fetch(`${BASE_URL}/recipes?limit=9${query ? query : ''}`)
     .then(res => {
       if (!res.ok) {
         throw new Error(res.status);
