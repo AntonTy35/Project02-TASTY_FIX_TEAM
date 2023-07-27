@@ -1,0 +1,63 @@
+.cards-container {
+  width: 335px;
+  height: 335px;
+  flex-shrink: 0;
+  border-radius: 15px;
+}
+
+.respect-menu {
+  margin: 16px 0 0 297px;
+}
+.cards_title {
+  color: #f8f8f8;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: calc(18 / 14);
+  text-transform: uppercase;
+  margin: 176px 0 0 16px;
+}
+.cards_list {
+  width: 303px;
+  height: 32px;
+  flex-shrink: 0;
+  overflow: hidden;
+  color: #f8f8f8;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: calc(16 / 12);
+  margin: 8px 0 0 16px;
+}
+.rating {
+  color: #f8f8f8;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: calc(18 / 14);
+  margin-right: 8px;
+}
+.cards-rating {
+  display: flex;
+  margin: 16px 0 0 16px;
+}
+.see_recipe {
+  margin-left: 98px;
+  display: flex;
+  padding: 8px 14px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  background: #9bb537;
+  color: #f8f8f8;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  transform: translate(-0%, -25%);
+}
