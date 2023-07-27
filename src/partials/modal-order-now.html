@@ -1,69 +1,46 @@
-<div class="backdrop-order-now" data-modal-order-now>
+<div class="backdrop-order-now is-hidden-modal-order-now" data-modal-order-now>
   <div class="modal-order-now">
-    <button
-      type="button"
-      class="modal-order-now-close-btn"
-      data-modal-order-now-close
-    >
+    <button type="button" class="modal-order-now-close-btn" data-modal-order-now-close>
       <svg class="modal-order-now-close-btn-icon" width="12" height="12">
-        <use href="/src/images/icons.svg#icon-close-modal-order-now"></use>
+        <use href="./images/icons.svg#icon-close-modal"></use>
       </svg>
     </button>
 
     <h2 class="modal-order-now-title">Order now</h2>
 
+
     <form class="modal-order-now-form" id="contactFormOrderNow">
       <label class="modal-order-now-form-lable-field">
         <span class="modal-order-now-form-input-description">Name</span>
-        <input
-          type="text"
-          name="user_name"
-          class="modal-order-now-form-input"
-          required
-          pattern="^[a-zA-Zа-яА-ЯіІїЇ]+$"
-          minlength="2"
-          title="minimum 2 letters"
-        />
+        <input type="text" name="user_name" class="modal-order-now-form-input" required pattern="^[a-zA-Zа-яА-ЯіІїЇ]+$"
+          minlength="2" title="minimum 2 letters" />
       </label>
 
       <label class="modal-order-now-form-lable-field">
         <span class="modal-order-now-form-input-description">Phone number</span>
         <span class="modal-order-now-form-wrapper">
-          <input
-            type="tel"
-            name="user-phone"
-            class="modal-order-now-form-input"
-            required
-            pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
-            title="[xxx-xxx-xx-xx]"
-          />
+          <input type="tel" name="user-phone" class="modal-order-now-form-input" required
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" title="xxx-xxx-xx-xx" />
         </span>
       </label>
 
       <label class="modal-order-now-form-lable-field">
         <span class="modal-order-now-form-input-description">Email</span>
         <span class="modal-order-now-form-wrapper">
-          <input
-            type="email"
-            name="user-email"
-            class="modal-order-now-form-input"
-            required
-            maxlength="29"
-            title="user@mail.com"
-          />
+
+          <input type="email" name="user-email" class="modal-order-now-form-input"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$" required maxlength="29" title="user@mail.com" />
         </span>
       </label>
 
       <label class="modal-order-now-form-lable-field">
         <span class="modal-order-now-form-input-description">Comment</span>
-        <textarea
-          name="user-massage"
-          class="modal-order-now-form-message"
-          title="Enter your message"
-        ></textarea>
+
+        <textarea name="user-massage" class="modal-order-now-form-message" title="Enter your message"></textarea>
       </label>
 
       <button type="submit" class="modal-order-now-form-submit">Send</button>
     </form>
   </div>
+</div>
 </div>

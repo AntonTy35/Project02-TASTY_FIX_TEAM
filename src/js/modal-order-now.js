@@ -1,16 +1,23 @@
+
 // Відкриття та закриття модального вікна:
+
 const refs = {
-  openModalBtn: document.querySelector('[data-modal-order-now-open]'),
+  openModalBtn: document.querySelectorAll('[data-modal-order-now-open]'),
+
   closeModalBtn: document.querySelector('[data-modal-order-now-close]'),
   modal: document.querySelector('[data-modal-order-now]'),
 };
 
-// refs.openModalBtn.addEventListener('click', toggleModal);
+refs.openModalBtn.forEach(btn => {
+  btn.addEventListener('click', toggleModal);
+});
+
 refs.closeModalBtn.addEventListener('click', toggleModal);
 
 function toggleModal() {
   refs.modal.classList.toggle('is-hidden-modal-order-now');
 }
+
 // Відправка даних з форми на сервер:
 document
   .getElementById('contactFormOrderNow')
@@ -57,3 +64,4 @@ console.log(toggleButton);
 toggleButton.addEventListener('click', () => {
   document.body.classList.toggle('dark-theme');
 });
+

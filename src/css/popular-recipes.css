@@ -43,7 +43,11 @@
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+}
+
+.popular_plus_recipes {
+  display: flex;
 }
 
 .popular_title {
@@ -99,6 +103,7 @@
 
 
 .popular_gallery_list_item_title {
+    overflow: hidden;
     color: #050505;
     font-family: Inter;
     font-size: 14px;
@@ -106,14 +111,15 @@
     font-weight: 600;
     line-height: 1.29; 
     text-transform: uppercase;
-    max-width: 155px;
+    width: 155px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .popular_gallery_list_item_description {
     overflow: hidden;
     color: rgba(5, 5, 5, 0.80);
-    text-overflow: ellipsis;
-    
+    text-overflow: ellipsis;    
     font-family: Inter;
     font-size: 10px;
     font-style: normal;
