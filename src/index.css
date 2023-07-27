@@ -5,6 +5,8 @@
 @import url('./css/filters.css');
 @import url('./css/popular-recipes.css');
 /* @import url('./css/recipes.css'); */
+@import url('./css/cards.css');
+
 @import url('./css/modal-banana-pancakes.css');
 @import url('./css/modal-rating.css');
 @import url('./css/modal-order-now.css');
@@ -12,5 +14,4 @@
 @import url('./css/cards-pagination-favorites.css');
 @import url('./css/pagination.css');
 
-@import url('./css/cards.css');
 @import url('./css/scroll.up.css');
