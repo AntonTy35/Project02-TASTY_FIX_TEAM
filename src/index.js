@@ -6,6 +6,7 @@ import './js/home/filters';
 import './js/home/popular-recipes';
 import './js/home/recipes';
 import './js/home/pagination';
+import './js/home/scroll-up';
 
 import './js/modal-banana-pancakes';
 import './js/modal-rating';
