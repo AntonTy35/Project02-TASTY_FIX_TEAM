@@ -60,10 +60,10 @@ ol {
     /* margin: 0 auto; */
 }
 
-.home-wraper {
+/* .home-wraper {
     display: flex;
     justify-content: space-between;
-}
+} */
 
 .filter-bar {
     display: block;
@@ -76,6 +76,11 @@ ol {
     .container {
         max-width: 768px;
         padding: 0 32px;
+    }
+
+    .home-wraper {
+        display: flex;
+        justify-content: space-between;
     }
 }
 
