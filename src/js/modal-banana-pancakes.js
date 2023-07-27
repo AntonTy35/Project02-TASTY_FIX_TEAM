@@ -68,7 +68,7 @@ export function finallInitPage(id) {
     // isFavorite(data._id);
     renderVIDEO(data);
     renderRanting(data);
-    markUpRating();
+    // markUpRating();
     renderIngridient(data);
     renderHashtags(data);
     renderText(data);
