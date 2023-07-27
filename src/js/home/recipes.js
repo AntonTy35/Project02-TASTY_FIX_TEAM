@@ -26,31 +26,28 @@ function recipesMarkup(arr) {
     .map(
       ({ title, thumb, description }) => `<li>
       <div id="text_from_above">
-        <img class="recipes_img" src="${thumb}" alt="${title}" width="240" height="264">
+         <img class="recipes_img" src="${thumb}" alt="${title}" width="240" height="264">
           <div class="text_from_above">
                <div class="recipes_button_heart_from_above">
-                <button class="recipes_button_heart" type="button">
-                  <svg class="recipes_icon_heart" width="24" height="24">
-                  <use href="/src/images/off.svg">
-                  </use>
-                </svg>
-              </button>
+                    <button class="recipes_button_heart" type="button">
+                      <p class="recipes_simple_herz"></p>
+                  </button>
                </div>    
                 <div class="text_from_above_title">
-              <h2 class="recipes_title">${title}</h2>
-              <p class="recipes_description">${description}</p>
-              <p class="recipes_rating">rating</p>
+                    <h2 class="recipes_title">${title}</h2>
+                    <p class="recipes_description">${description}</p>
+                    <p class="recipes_rating">rating</p>
                 </div>
-               <div class="recipes_btn">
-                 <div class="recipes_simple_reting">
+                <div class="recipes_btn">
+                   <div class="recipes_simple_reting">
                    
-                 <div>
-              <button class="recipes_btn_see_recipe" type="button">See recipe</button> 
+                   <div>
+                   <button class="recipes_btn_see_recipe" type="button">See recipe</button> 
                 <div>             
               
-              <div>
-              <div>
-              </li>`
+          <div>
+       <div>
+                     </li>`
     )
     .join('');
 }

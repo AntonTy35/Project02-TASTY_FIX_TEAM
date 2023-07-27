@@ -34,9 +34,9 @@ position: relative;
 }
 
 .text_from_above {
-height: 220px;
+height: 240px;
 position: absolute;
-top: 5%;
+top: 15%;
 left: 10px;
 /* text-transform: uppercase; */
 color: white;
@@ -46,18 +46,28 @@ text-align: end;
 }
 
 .recipes_button_heart_from_above {
-  padding-bottom: 80px;
+  padding-bottom: 90px;
+  /* position: absolute; */
 }
 
 .recipes_button_heart {
   border: none;
-  background-color: rgb(220, 187, 187);
+  /* background-color: rgb(210, 216, 48); */
+  background-color: transparent;
   gap: 14px;
-  width: 28px;
+  width: 24px;
   height: 24px;
   cursor: pointer;
   color: #000;
+  position: absolute;
+  right: 16px;
+  }
+
+.recipes_button_heart:hover {
+   fill : #000;
+   /* background-color: rgb(210, 216, 48); */
 }
+
 
 .recipes_icon_heart {
   /* margin-right: 14px; */
@@ -123,6 +133,7 @@ text-align: end;
   width: 218px;
   height: 31px;
   justify-content: flex-end;
+  position: relative;
 }
 
 .recipes_btn_reting {
@@ -157,15 +168,45 @@ text-align: end;
   }
 
   .recipes_simple_reting {
-     /* position: relative; */
-     font-size: 40px;
+     /* background-image: url(../images/off.svg); */
+     font-size: 18px;
      display: inline-block;
+     /* background-image: url(../images/off.svg); */
   }
 
   .recipes_simple_reting::before {
     position: absolute;
   content: "*****";
+  color: transparent;
   display: block;
-  top: 85%;
-  left: 0;
+  top: 3%;
+  left: -5px;
+  background-image: url(../images/off.svg);  
+  background-color: transparent;
+  width: 96px;
+  }
+
+  .recipes_simple_herz {
+     width: 20px;
+     font-size: 18px;
+     display: inline-block;
+  }
+
+  .recipes_simple_herz:hover {
+     background-color: #000;
+  }
+
+  .recipes_simple_herz::before {
+  position: absolute;
+  content: "*";
+  color: transparent;
+  display: block;
+  /* top: 3%;
+  left: -5px; */
+  background-image: url(../images/herz.svg);  
+  /* background-color: transparent; */
+  width: 24px;
+  height: 24px;
+  top: -36px;   
+  /* right: 16px; */
   }
