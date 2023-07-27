@@ -8,6 +8,7 @@
 .respect-menu {
   margin: 16px 0 0 297px;
 }
+
 .cards_title {
   color: #f8f8f8;
   font-family: Inter;
@@ -18,6 +19,7 @@
   text-transform: uppercase;
   margin: 176px 0 0 16px;
 }
+
 .cards_list {
   width: 303px;
   height: 32px;
@@ -31,6 +33,7 @@
   line-height: calc(16 / 12);
   margin: 8px 0 0 16px;
 }
+
 .rating {
   color: #f8f8f8;
   font-family: Inter;
@@ -40,10 +43,12 @@
   line-height: calc(18 / 14);
   margin-right: 8px;
 }
+
 .cards-rating {
   display: flex;
   margin: 16px 0 0 16px;
 }
+
 .see_recipe {
   margin-left: 98px;
   display: flex;
@@ -52,6 +57,7 @@
   align-items: center;
   gap: 10px;
   border-radius: 8px;
+  border: 1px solid #9bb537;
   background: #9bb537;
   color: #f8f8f8;
   font-family: Inter;
@@ -60,4 +66,5 @@
   font-weight: 500;
   line-height: normal;
   transform: translate(-0%, -25%);
+
 }
