@@ -1,4 +1,4 @@
-// import { markUpRating } from './modal-rating';
+import { markUpRating } from './modal-rating';
 // import localctorage from './localctorage';
 // import { KEY } from './addToFavorites';
 // import { addToFavorites, removeFromFavorites } from './addToFavorites';
@@ -68,7 +68,7 @@ export function finallInitPage(id) {
     // isFavorite(data._id);
     renderVIDEO(data);
     renderRanting(data);
-    // markUpRating();
+    markUpRating();
     renderIngridient(data);
     renderHashtags(data);
     renderText(data);
