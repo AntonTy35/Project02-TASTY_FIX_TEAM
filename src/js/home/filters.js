@@ -3,9 +3,26 @@ import { recipesFetch } from '../home/recipes';
 
 const BASE_URL_FOR_FILTER = 'https://tasty-treats-backend.p.goit.global/api';
 
+const searchInEl = document.querySelector('.search-input');
+const resetBtnInput = document.querySelector('.reset-btn');
+
+const placeholderTime = document.querySelector('.time-placeholder');
+const placeholderArea = document.querySelector('.area-placeholder');
+const placeholderIng = document.querySelector('.ingredient-placeholder');
+
 let valueTime;
 let valueArea;
 let valueIngr;
+
+//
+
+function debounce(func, delay) {
+  let timer;
+  return function (...args) {
+    clearTimeout(timer);
+    timer = setTimeout(() => func.apply(this, args), delay);
+  };
+}
 
 //
 
@@ -30,7 +47,6 @@ async function fetchIngredients() {
 async function createTimeList() {
   const inputEl = document.querySelector('.time-input');
   const iconEl = document.querySelector('.time-icon');
-  const placeholderEl = document.querySelector('.time-placeholder');
   const containerEl = document.querySelector('.time-list');
 
   for (let i = 5; i <= 120; i += 5) {
@@ -48,9 +64,9 @@ async function createTimeList() {
   const itemEls = document.querySelectorAll('.time-item');
   itemEls.forEach(function (item) {
     item.addEventListener('click', function () {
-      placeholderEl.textContent = item.textContent;
-      placeholderEl.classList.add('active');
-      if (placeholderEl.textContent !== '') {
+      placeholderTime.textContent = item.textContent;
+      placeholderTime.classList.add('active');
+      if (placeholderTime.textContent !== '') {
         valueTime = parseInt(item.textContent.match(/\d+/)[0], 10);
         console.log(valueTime);
         function changeingredient(valueTime) {
@@ -64,12 +80,11 @@ async function createTimeList() {
   });
 }
 
-// ####### markup area-list #######
+//  Створення Area List
 
 async function createAreasList() {
   const inputEl = document.querySelector('.area-input');
   const iconEl = document.querySelector('.area-icon');
-  const placeholderEl = document.querySelector('.area-placeholder');
   const containerEl = document.querySelector('.area-list');
   const areas = await fetchAreas();
   areas.sort();
@@ -90,9 +105,9 @@ async function createAreasList() {
   const itemEls = document.querySelectorAll('.area-item');
   itemEls.forEach(function (item) {
     item.addEventListener('click', function () {
-      placeholderEl.textContent = item.textContent;
-      placeholderEl.classList.add('active');
-      if (placeholderEl.textContent !== '') {
+      placeholderArea.textContent = item.textContent;
+      placeholderArea.classList.add('active');
+      if (placeholderArea.textContent !== '') {
         valueArea = item.textContent;
         console.log(valueArea);
         function changeingredient(valueArea) {
@@ -106,10 +121,9 @@ async function createAreasList() {
   });
 }
 
-// ####### markup ingredient-list #######
+//  Створення Ingredient List
 
 async function createIngredientsList() {
-  const placeholderEl = document.querySelector('.ingredient-placeholder');
   const iconEl = document.querySelector('.ingredient-icon');
   const inputEl = document.querySelector('.ingredient-input');
   const containerEl = document.querySelector('.ingredient-list');
@@ -134,9 +148,9 @@ async function createIngredientsList() {
   const itemEls = document.querySelectorAll('.ingredient-item');
   itemEls.forEach(function (item) {
     item.addEventListener('click', function () {
-      placeholderEl.textContent = item.textContent;
-      placeholderEl.classList.add('active');
-      if (placeholderEl.textContent !== '') {
+      placeholderIng.textContent = item.textContent;
+      placeholderIng.classList.add('active');
+      if (placeholderIng.textContent !== '') {
         valueIngr = item.id;
         console.log(valueIngr);
         function changeingredient(valueIngr) {
@@ -154,7 +168,54 @@ createIngredientsList();
 createAreasList();
 createTimeList();
 
+// Фільрація по інпуту
+
+searchInEl.addEventListener(
+  'input',
+  debounce(() => {
+    const title = String(searchInEl.value.trim());
+    if (title !== '') {
+      const searchIcon = document.querySelector('.search-icon');
+      searchIcon.style.fill = '#9bb537';
+      searchInEl.classList.add('active');
+      resetBtnInput.style.display = 'block';
+      getFilter.title = title;
+      someFunc(getFilter);
+    } else {
+      searchInEl.classList.remove('active');
+      resetBtnInput.style.display = 'none';
+    }
+  }),
+  500
+);
+
+resetBtnInput.addEventListener('click', () => {
+  resetBtnInput.style.display = 'none';
+  searchInEl.value = '';
+  getFilter.title = '';
+  someFunc(getFilter);
+});
+
+// Скидання фільтрації при кліку на кнопку Reset the filter
+
+const resetBtnFlterBar = document.querySelector('.filter-bar-btn-reset');
+
+resetBtnFlterBar.addEventListener('click', () => {
+  searchInEl.value = '';
+  // placeholderTime.textContent = '';
+  // placeholderArea.textContent = '';
+  // placeholderIng.textContent = '';
+  getFilter.area = '';
+  getFilter.time = '';
+  getFilter.ingredient = '';
+  getFilter.title = '';
+  someFunc(getFilter);
+});
+
+// Створення значень для фільтраційного посилання
+
 const getFilter = {
+  title: '',
   area: '',
   time: '',
   ingredient: '',
@@ -168,3 +229,5 @@ const someFunc = queryParams => {
 
   return recipesFetch(query);
 };
+
+console.log(searchInEl);

@@ -82,6 +82,7 @@
 }
 
 .search-input {
+  color: var(--black-color);
   width: 100%;
   height: 46px;
   padding: 14px 48px;
@@ -141,8 +142,9 @@
 }
 
 .close-search-icon {
-  stroke: var(--black-color);
+  stroke: #9bb537;
   transition: 250ms;
+  fill: var(--primary-color-btn);
 }
 
 .dark-theme .close-search-icon {
