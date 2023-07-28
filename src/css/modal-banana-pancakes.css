@@ -185,10 +185,6 @@
   border-bottom: 1px solid var(--switch-color);
 }
 
-.recipes-container {
-  /* height: 224px; */
-}
-
 .modal-rating {
   font-weight: 500;
   font-size: 12px;

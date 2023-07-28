@@ -1,6 +1,4 @@
 import Pagination from 'tui-pagination';
-import 'tui-pagination/dist/tui-pagination.css';
-import { recipesFetch } from './recipes';
 
 const container = document.getElementById('pagination');
 
