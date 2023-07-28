@@ -1,7 +1,8 @@
+// import axios from 'axios';
 
 import { finallInitPage } from '../modal-banana-pancakes';
 
-export const recipes = document.querySelector('.recipes-js');
+const recipes = document.querySelector('.recipes-js');
 
 const BASE_URL = 'https://tasty-treats-backend.p.goit.global/api';
 
@@ -20,94 +21,45 @@ export async function recipesFetch(query) {
     .catch(err => console.log(err));
 }
 
+recipesFetch();
 
+function recipesMarkup(arr) {
+  return arr
+    .map(
+      ({ title, thumb, description }) => `<li>
+      <div id="text_from_above">
+        <img class="recipes_img" src="${thumb}" alt="${title}" width="240" height="264">
+          <div class="text_from_above">
+               <div class="recipes_button_heart_from_above">
+                <button class="recipes_button_heart" type="button">
+                  <svg class="recipes_icon_heart" width="24" height="24">
+                  <use href="/src/images/off.svg">
+                  </use>
+                </svg>
+              </button>
+               </div>    
+                <div class="text_from_above_title">
+              <h2 class="recipes_title">${title}</h2>
+              <p class="recipes_description">${description}</p>
+              <p class="recipes_rating">rating</p>
+                </div>
 
-
-export function recipesMarkup(arr) {
-  
-    return arr
-      .map(
-        ({ preview, title, category, description, area, rating, _id })=>
-    
-    `<div class="gallery__link">
-        <img src="${preview}" class="gallery-img" alt="${title}" loading="lazy" />
-        <div class="info">
-          <p class="info-item-title">
-            <b>${title}</b>
-          </p>
-          <p class="is-hidden">
-            <b>${category}</b>
-          </p>
-          <p class="info-item-description">
-            <b>${description}</b>
-          </p>
-          <p class="is-hidden">
-            <b> ${area}</b>
-          </p>
-          <button class="heart-wrapper">
-          <svg class="heart-icon" width="22" height="22" viewBox="0 0 32 32">
-            <path opacity="0.5" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.9091" d="M15.991 6.848c-2.666-3.117-7.113-3.956-10.451-1.101-3.341 2.854-3.811 7.625-1.188 11.001 2.182 2.806 8.781 8.724 10.944 10.64 0.241 0.214 0.364 0.321 0.505 0.364 0.057 0.017 0.123 0.027 0.191 0.027s0.133-0.010 0.195-0.029l-0.005 0.001c0.141-0.042 0.262-0.15 0.503-0.364 2.164-1.916 8.764-7.834 10.944-10.64 2.624-3.375 2.211-8.177-1.187-11.001-3.398-2.825-7.785-2.016-10.451 1.101z"></path>
-          </svg>
-            </button>
-          <div class="wrapper-bottom">
-          <div class="rating-wrapper">
-          
-
-          <div class="rating-container">   
-            <p class="rating">${rating.toFixed(1)}</p> 
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
-          <path
-            d="M6.04894 1.42705C6.3483 0.505742 7.6517 0.505741 7.95106 1.42705L8.79611 4.02786C8.92999 4.43989 9.31394 4.71885 9.74717 4.71885H12.4818C13.4505 4.71885 13.8533 5.95846 13.0696 6.52786L10.8572 8.13525C10.5067 8.3899 10.3601 8.84127 10.494 9.25329L11.339 11.8541C11.6384 12.7754 10.5839 13.5415 9.80017 12.9721L7.58779 11.3647C7.2373 11.1101 6.7627 11.1101 6.41222 11.3647L4.19983 12.9721C3.41612 13.5415 2.36164 12.7754 2.66099 11.8541L3.50604 9.25329C3.63992 8.84127 3.49326 8.3899 3.14277 8.13525L0.930391 6.52787C0.146677 5.95846 0.549452 4.71885 1.51818 4.71885H4.25283C4.68606 4.71885 5.07001 4.43989 5.20389 4.02786L6.04894 1.42705Z"
-            fill="#EEA10C" />
-        </svg>
-
-        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
-        <path
-          d="M6.04894 1.42705C6.3483 0.505742 7.6517 0.505741 7.95106 1.42705L8.79611 4.02786C8.92999 4.43989 9.31394 4.71885 9.74717 4.71885H12.4818C13.4505 4.71885 13.8533 5.95846 13.0696 6.52786L10.8572 8.13525C10.5067 8.3899 10.3601 8.84127 10.494 9.25329L11.339 11.8541C11.6384 12.7754 10.5839 13.5415 9.80017 12.9721L7.58779 11.3647C7.2373 11.1101 6.7627 11.1101 6.41222 11.3647L4.19983 12.9721C3.41612 13.5415 2.36164 12.7754 2.66099 11.8541L3.50604 9.25329C3.63992 8.84127 3.49326 8.3899 3.14277 8.13525L0.930391 6.52787C0.146677 5.95846 0.549452 4.71885 1.51818 4.71885H4.25283C4.68606 4.71885 5.07001 4.43989 5.20389 4.02786L6.04894 1.42705Z"
-          fill="#EEA10C" />
-      </svg>
-
-      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
-      <path
-        d="M6.04894 1.42705C6.3483 0.505742 7.6517 0.505741 7.95106 1.42705L8.79611 4.02786C8.92999 4.43989 9.31394 4.71885 9.74717 4.71885H12.4818C13.4505 4.71885 13.8533 5.95846 13.0696 6.52786L10.8572 8.13525C10.5067 8.3899 10.3601 8.84127 10.494 9.25329L11.339 11.8541C11.6384 12.7754 10.5839 13.5415 9.80017 12.9721L7.58779 11.3647C7.2373 11.1101 6.7627 11.1101 6.41222 11.3647L4.19983 12.9721C3.41612 13.5415 2.36164 12.7754 2.66099 11.8541L3.50604 9.25329C3.63992 8.84127 3.49326 8.3899 3.14277 8.13525L0.930391 6.52787C0.146677 5.95846 0.549452 4.71885 1.51818 4.71885H4.25283C4.68606 4.71885 5.07001 4.43989 5.20389 4.02786L6.04894 1.42705Z"
-        fill="#EEA10C" />
-    </svg>
-
-    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
-    <path
-      d="M6.04894 1.42705C6.3483 0.505742 7.6517 0.505741 7.95106 1.42705L8.79611 4.02786C8.92999 4.43989 9.31394 4.71885 9.74717 4.71885H12.4818C13.4505 4.71885 13.8533 5.95846 13.0696 6.52786L10.8572 8.13525C10.5067 8.3899 10.3601 8.84127 10.494 9.25329L11.339 11.8541C11.6384 12.7754 10.5839 13.5415 9.80017 12.9721L7.58779 11.3647C7.2373 11.1101 6.7627 11.1101 6.41222 11.3647L4.19983 12.9721C3.41612 13.5415 2.36164 12.7754 2.66099 11.8541L3.50604 9.25329C3.63992 8.84127 3.49326 8.3899 3.14277 8.13525L0.930391 6.52787C0.146677 5.95846 0.549452 4.71885 1.51818 4.71885H4.25283C4.68606 4.71885 5.07001 4.43989 5.20389 4.02786L6.04894 1.42705Z"
-      fill="#EEA10C" />
-  </svg>
-        
-  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
-  <path
-    d="M6.04894 1.42705C6.3483 0.505742 7.6517 0.505741 7.95106 1.42705L8.79611 4.02786C8.92999 4.43989 9.31394 4.71885 9.74717 4.71885H12.4818C13.4505 4.71885 13.8533 5.95846 13.0696 6.52786L10.8572 8.13525C10.5067 8.3899 10.3601 8.84127 10.494 9.25329L11.339 11.8541C11.6384 12.7754 10.5839 13.5415 9.80017 12.9721L7.58779 11.3647C7.2373 11.1101 6.7627 11.1101 6.41222 11.3647L4.19983 12.9721C3.41612 13.5415 2.36164 12.7754 2.66099 11.8541L3.50604 9.25329C3.63992 8.84127 3.49326 8.3899 3.14277 8.13525L0.930391 6.52787C0.146677 5.95846 0.549452 4.71885 1.51818 4.71885H4.25283C4.68606 4.71885 5.07001 4.43989 5.20389 4.02786L6.04894 1.42705Z"
-    fill="#F8F8F8" fill-opacity="0.1" />
-</svg>
-        
-      </div>
-
-          </div>
-                  <div class="card-btn-wrapper">
-
-          
-            <button data-id=${_id} class="card-btn">See recipe</button>
-          </div>
-          </div>
-        </div>
-      </div>`
-     
-   ).join('');
-    };
-
-    
-   
-    document.addEventListener('DOMContentLoaded', () => {
-      recipesFetch();
-    });
-
-      recipes.addEventListener('click', e => {
-      if (e.target.nodeName === 'BUTTON') {
-        finallInitPage(e.target.closest('.card-btn').dataset.id);
-      }
-    });
+               <div class="recipes_btn">
+                 <div class="recipes_simple_reting">
+                   
+                 <div>
+              <button type="button" class="btn btn-primary cards__btn item-rec see-recipe-btn">See recipe</button> 
+                <div>
+              
+              <div>
+              <div>
+              </li>`
+    )
+    .join('');
+}
+recipes.addEventListener('click', event => {
+  const targetBtn = event.target;
+  if (targetBtn.classList.contains('see-recipe-btn')) {
+    finallInitPage(targetBtn);
+  }
+});
