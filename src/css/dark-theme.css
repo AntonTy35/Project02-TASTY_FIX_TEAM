@@ -1,0 +1,36 @@
+body.dark-theme .nav-title-header {
+  color: #f8f8f8;
+}
+
+body.dark-theme .logo-black {
+  color: #f8f8f8;
+}
+
+body.dark-theme .button-trash {
+  background-color: transparent;
+  color: white;
+}
+body.dark-theme .icon-trash {
+  stroke: white;
+}
+body.dark-theme .hero-title {
+  color: #f8f8f8;
+}
+body.dark-theme .hero-btn {
+  color: #f8f8f8;
+}
+body.dark-theme .all-categories-item-btn {
+  color: #f8f8f8;
+}
+
+body.dark-theme .popular_title {
+  color: #f8f8f8;
+}
+
+body.dark-theme .popular_gallery_list_item_title {
+  color: #f8f8f8;
+}
+
+body.dark-theme .popular_gallery_list_item_description {
+  color: #f8f8f8;
+}
