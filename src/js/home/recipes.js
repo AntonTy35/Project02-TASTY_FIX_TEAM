@@ -1,5 +1,4 @@
 
-
 import { finallInitPage } from '../modal-banana-pancakes';
 
 export const recipes = document.querySelector('.recipes-js');
