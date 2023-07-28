@@ -6,7 +6,7 @@ const lightbox = new SimpleLightbox('.popular a', {
   captionsData: 'alt', captionPosition: 'bottom', captionDelay: 250 , scaleImageToRatio: true , heightRatio: 0.8 , widthRatio: 0.9
 });
 const popularList = document.querySelector(".popular-list");
-console.log(0, popularList); 
+// console.log(0, popularList); 
 const BASE_URL = 'https://tasty-treats-backend.p.goit.global/api/recipes/popular';
 
 
@@ -18,8 +18,8 @@ getPopular()
     .catch(console.warn);
 
 function renderPopularList(response) {   
-    console.log("1 - response", response); 
-    console.log("1.1 - popularList", popularList);
+    // console.log("1 - response", response); 
+    // console.log("1.1 - popularList", popularList);
   popularList.innerHTML = createPopularGalleryCards(response);
   lightbox.refresh();
 

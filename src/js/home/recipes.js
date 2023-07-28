@@ -1,4 +1,3 @@
-
 import { finallInitPage } from '../modal-banana-pancakes';
 
 export const recipes = document.querySelector('.recipes-js');
@@ -14,22 +13,17 @@ export async function recipesFetch(query) {
       return res.json();
     })
     .then(obj => {
-      console.log('obj.results', obj.results);
+      // console.log('obj.results', obj.results);
       recipes.insertAdjacentHTML('beforeend', recipesMarkup(obj.results));
     })
     .catch(err => console.log(err));
 }
 
-
-
-
 export function recipesMarkup(arr) {
-  
-    return arr
-      .map(
-        ({ preview, title, category, description, area, rating, _id })=>
-    
-    `<div class="gallery__link">
+  return arr
+    .map(
+      ({ preview, title, category, description, area, rating, _id }) =>
+        `<div class="gallery__link">
         <img src="${preview}" class="gallery-img" alt="${title}" loading="lazy" />
         <div class="info">
           <p class="info-item-title">
@@ -96,18 +90,16 @@ export function recipesMarkup(arr) {
           </div>
         </div>
       </div>`
-     
-   ).join('');
-    };
+    )
+    .join('');
+}
 
-    
-   
-    document.addEventListener('DOMContentLoaded', () => {
-      recipesFetch();
-    });
+document.addEventListener('DOMContentLoaded', () => {
+  recipesFetch();
+});
 
-      recipes.addEventListener('click', e => {
-      if (e.target.nodeName === 'BUTTON') {
-        finallInitPage(e.target.closest('.card-btn').dataset.id);
-      }
-    });
+recipes.addEventListener('click', e => {
+  if (e.target.nodeName === 'BUTTON') {
+    finallInitPage(e.target.closest('.card-btn').dataset.id);
+  }
+});
