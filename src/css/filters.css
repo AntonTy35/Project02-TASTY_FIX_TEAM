@@ -46,18 +46,18 @@
   --black-color: #050505;
 }
 
-/* .search-container {
+.search-container {
   width: 335px;
   display: flex;
   flex-wrap: wrap;
-  background: var(--light-color);
+  /* background: var(--light-color); */
   transition: 250ms;
-} */
+}
 
-/* .dark-theme .search-container {
+.dark-theme .search-container {
   background: var(--dark-color);
   transition: 250ms;
-} */
+}
 
 .filters-span {
   display: block;
@@ -142,9 +142,8 @@
 }
 
 .close-search-icon {
-  stroke: #9bb537;
   transition: 250ms;
-  fill: var(--primary-color-btn);
+  fill: rgba(5, 5, 5, 0.8);
 }
 
 .dark-theme .close-search-icon {
@@ -170,10 +169,12 @@
 
 .area-label {
   width: 161px;
+  margin-bottom: 14px;
 }
 
 .ingredient-label {
   width: 188px;
+  margin-bottom: 14px;
 }
 
 .dark-theme .time-input,
@@ -525,11 +526,26 @@
 }
 
 /* Стилі для кнопки "Reset" */
+.filter-bar-btn-reset-item {
+  flex-basis: 100%;
+  margin-left: auto;
+  align-self: flex-end;
+}
+
 .filter-bar-btn-reset {
+  /* display: block; */
+  /* margin-left: 30px; */
+  /* margin-top: 14px; */
   background-color: transparent;
   border: transparent;
   cursor: pointer;
 }
+
+/* @media screen and (min-width: 768px) {
+  .filter-bar-btn-reset {
+    margin-left: 0px;
+  }
+} */
 
 .filter-bar-icon-reset {
   width: 16px;
@@ -547,4 +563,8 @@
 .filter-bar-btn-reset-content {
   display: flex;
   align-items: center;
+}
+
+.dark-theme .filter-bar-btn-reset-description {
+  color: #ffffff80;
 }
