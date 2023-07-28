@@ -1,30 +1,30 @@
 :root {
-    font-family: Inter, sans-serif;
-    font-size: 14px;
-    line-height: 1.2;
-    font-weight: 500;
-    letter-spacing: -0.02em;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: -0.02em;
 
-    --primary-text-color: #fff;
+  --primary-text-color: #fff;
 
-    --primary-text-color-05: rgba(5, 5, 5, 0.5);
+  --primary-text-color-05: rgba(5, 5, 5, 0.5);
 
-    --primary-text-color-02: rgba(5, 5, 5, 0.2);
-    --primary-text-color-01: rgba(5, 5, 5, 1);
+  --primary-text-color-02: rgba(5, 5, 5, 0.2);
+  --primary-text-color-01: rgba(5, 5, 5, 1);
 
-    --primary-color-btn: #9bb537;
+  --primary-color-btn: #9bb537;
 
-    --bgc-background: #161616;
-    --bgc-background-mob-menu: #050505;
-    --border-paginatio: rgba(5, 5, 5, 0.3);
+  --bgc-background: #161616;
+  --bgc-background-mob-menu: #050505;
+  --border-paginatio: rgba(5, 5, 5, 0.3);
 
-    --transition-dur-func-btn-hover: 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  --transition-dur-func-btn-hover: 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
 img {
-    display: block;
-    max-width: 100%;
-    height: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 h1,
@@ -34,65 +34,60 @@ h4,
 h5,
 h6,
 p {
-    margin-top: 0;
-    margin-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 ul,
 ol {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
 }
 
 .list {
-    list-style: none;
+  list-style: none;
 }
 
 .link {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .container {
-    min-width: 320px;
-    max-width: 375px;
-    padding: 0 20px;
-    /* margin: 0 auto; */
+  min-width: 320px;
+  max-width: 375px;
+  padding: 0 20px;
+  margin: 0 auto;
 }
 
-
-
 .filter-bar {
-    display: block;
-    /* margin-left: 140px; */
+  display: block;
+  /* margin-left: 140px; */
 }
 
 .all-categories-popular-recipes {
-    display: block;
+  display: block;
 }
 
-
-
 @media screen and (min-width: 768px) {
-    .container {
-        max-width: 768px;
-        padding: 0 32px;
-    }
+  .container {
+    max-width: 768px;
+    padding: 0 32px;
+  }
 
-    .home-wraper {
-        display: flex;
-        flex-direction: row;
+  .home-wraper {
+    display: flex;
+    flex-direction: row;
+  }
 
-    }
-
-    .filters-recipes-pagination {
-        margin-left: 48px;
-    }
+  .filters-recipes-pagination {
+    margin-left: 48px;
+  }
 }
 
 @media screen and (min-width: 1280px) {
-    .container {
-        max-width: 1280px;
-        padding: 0 100px;
-    }
+  .container {
+    max-width: 1280px;
+    padding: 0 100px;
+  }
 }

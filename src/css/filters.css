@@ -1,3 +1,30 @@
+.time-area {
+  display: flex;
+  flex-direction: row;
+}
+.filter-bar-btn-reset {
+  display: flex;
+  gap: 4px;
+  margin-left: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .all-inputs {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .time-label,
+  .area-label,
+  .ingredient-label {
+    display: flex;
+    flex-direction: column;
+    height: 48px;
+    width: 188px;
+    gap: 10px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   body {
     overflow-x: hidden;
@@ -160,6 +187,7 @@
   display: flex;
   flex-direction: column;
   height: 68px;
+  gap: 10px;
 }
 
 .time-label {
@@ -538,7 +566,6 @@
 }
 
 .filter-bar-btn-reset-description {
-  margin-left: 4px;
   font-size: 12px;
   line-height: calc(16 / 12);
   color: var(--primary-text-color-05);
