@@ -13,11 +13,11 @@ import axios from 'axios';
 // }
 // Comment out end
 
-function pushDataToLocalStorage(key, data) {
-  const newData = [...data, ...data, ...data, ...data, ...data];
-  console.log('newData', newData);
-  localStorage.setItem(key, JSON.stringify(newData));
-}
+// function pushDataToLocalStorage(key, data) {
+//   const newData = [...data, ...data, ...data, ...data, ...data];
+//   console.log('newData', newData);
+//   localStorage.setItem(key, JSON.stringify(newData));
+// }
 
 export function pullDataFromLocalStroage(key) {
   const data = JSON.parse(localStorage.getItem(key));
