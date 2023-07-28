@@ -55,7 +55,6 @@
 }
 
 .dark-theme .search-container {
-  background: var(--dark-color);
   transition: 250ms;
 }
 
