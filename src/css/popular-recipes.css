@@ -12,10 +12,12 @@
   background: transparent;
   transition: opacity 0.75s, visibility 0.75s;
 }
+
 .popular_loader--hidden {
   opacity: 0;
   visibility: hidden;
 }
+
 .popular_loader::after {
   content: "";
   width: 75px;
@@ -25,10 +27,12 @@
   border-radius: 50%;
   animation: loading 0.75s ease infinite;
 }
+
 @keyframes loading {
   from {
     transform: rotate(0turn);
   }
+
   to {
     transform: rotate(1turn);
   }
@@ -36,14 +40,14 @@
 
 
 .popular {
-    display: flex;
-    width: 235px;
-    height: 364px;
-    align-content: center;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 40px;
-    margin-bottom: 40px;
+  display: flex;
+  width: 335px;
+  height: 364px;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .popular_plus_recipes {
@@ -51,15 +55,15 @@
 }
 
 .popular_title {
-    color: #050505;
-    font-family: Inter;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 1.17; 
-    text-transform: uppercase;
-    margin-bottom: 32px;
-    margin-top: 8px;
+  color: #050505;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.17;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+  margin-top: 8px;
 }
 
 .popular-list {
@@ -68,63 +72,92 @@
   padding-left: 32px;
   display: flex;
   flex-wrap: wrap;
-  
+
   grid-gap: 30px;
 }
 
 .popular_gallery_card {
-    display: flex;
+  display: flex;
+
 }
 
 .popular_gallery_info {
-    display: flex;
-    width: 80px;
-    height: 64px;
-    
+  display: flex;
+  width: 80px;
+  height: 64px;
+
 }
 
 .popular_gallery_image {
-    width: 64px;
-    height: 64px;
-    box-sizing: border-box;
-    border-radius: 8px;
+  width: 64px;
+  height: 64px;
+  box-sizing: border-box;
+  border-radius: 8px;
 
 }
 
 .popular_gallery_image:hover {
-    width: 80px;
-    height: 80px;
+  width: 80px;
+  height: 80px;
 }
 
 .popular_gallery_list {
-    width: 164px;
+  width: 164px;
 }
 
 
 
 .popular_gallery_list_item_title {
-    overflow: hidden;
-    color: #050505;
-    font-family: Inter;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 1.29; 
-    text-transform: uppercase;
-    width: 155px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+  overflow: hidden;
+  color: #050505;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.29;
+  text-transform: uppercase;
+  width: 155px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .popular_gallery_list_item_description {
-    overflow: hidden;
-    color: rgba(5, 5, 5, 0.80);
-    text-overflow: ellipsis;    
-    font-family: Inter;
-    font-size: 10px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.4; 
-    max-width: 156px;
-    max-height: 41px;
+  overflow: hidden;
+  color: rgba(5, 5, 5, 0.80);
+  text-overflow: ellipsis;
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.4;
+  max-width: 156px;
+  max-height: 41px;
+}
+
+@media screen and (min-width: 768px) {
+
+  .popular {
+    display: flex;
+    width: 176px;
+    height: 364px;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+
+  .popular {
+    display: flex;
+    width: 221px;
+    height: 364px;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
 }

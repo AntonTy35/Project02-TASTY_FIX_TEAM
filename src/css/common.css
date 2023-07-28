@@ -60,10 +60,7 @@ ol {
     /* margin: 0 auto; */
 }
 
-/* .home-wraper {
-    display: flex;
-    justify-content: space-between;
-} */
+
 
 .filter-bar {
     display: block;
@@ -83,8 +80,9 @@ ol {
     }
 
     .home-wraper {
-        /* display: flex; */
-        justify-content: space-between;
+        display: flex;
+        flex-direction: row;
+
     }
 
     .filters-recipes-pagination {
