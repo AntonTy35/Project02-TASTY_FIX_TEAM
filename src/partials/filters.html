@@ -1,6 +1,5 @@
 <div class="search-container">
-  <div class="all-inputs">
-    <div class="search-label">
+  <div class="search-label">
     <span class="filters-span">Search</span>
     <input class="search-input" type="text" placeholder="Enter Text" />
     <svg class="search-icon" width="18" height="18">
@@ -13,49 +12,47 @@
     </button>
   </div>
 
-  <div class="time-area">
-    <div class="time-label">
-      <span class="filters-span">Time</span>
-      <div class="time-input">
-        <input class="time-placeholder" placeholder="40 min"></input>
-        <svg class="select-icon time-icon" width="18" height="18">
-          <use href="./images/icons.svg#icon-select-down"></use>
-        </svg>
-        <ul class="time-list"></ul>
-      </div>
+  <div class="time-label">
+    <span class="filters-span">Time</span>
+    <div class="time-input">
+      <button class="time-placeholder" type="button"></button>
+      <svg class="select-icon time-icon" width="18" height="18">
+        <use href="./images/icons.svg#icon-select-down"></use>
+      </svg>
+      <ul class="time-list"></ul>
     </div>
+  </div>
 
-    <div class="area-label">
-      <span class="filters-span">Area</span>
-      <div class="area-input">
-        <input class="area-placeholder" placeholder="Italian">        <svg class="select-icon area-icon" width="18" height="18">
-          <use href="./images/icons.svg#icon-select-down"></use>
-        </svg></input>
-
-        <ul class="area-list"></ul>
-      </div>
+  <div class="area-label">
+    <span class="filters-span">Area</span>
+    <div class="area-input">
+      <button class="area-placeholder" type="button"></button>
+      <svg class="select-icon area-icon" width="18" height="18">
+        <use href="./images/icons.svg#icon-select-down"></use>
+      </svg>
+      <ul class="area-list"></ul>
     </div>
   </div>
 
   <div class="ingredient-label">
     <span class="filters-span">Ingredients</span>
     <div class="ingredient-input">
-      <input class="ingredient-placeholder" placeholder="Tomato">      <svg class="select-icon ingredient-icon" width="18" height="18">
+      <button class="ingredient-placeholder" type="button"></button>
+      <svg class="select-icon ingredient-icon" width="18" height="18">
         <use href="./images/icons.svg#icon-select-down"></use>
-      </svg></input>
-
+      </svg>
       <ul class="ingredient-list"></ul>
     </div>
-        <button type="button" class="filter-bar-btn-reset">
-    <div class="filter-bar-btn-reset-content">
-      <svg class="filter-bar-icon-reset">
-        <use xlink:href="./images/icons.svg#icon-reset-close"></use>
-      </svg>
-      <span class="filter-bar-btn-reset-description">Reset the filter</span>
-    </div>
-  </button>
   </div>
 
+  <div class="filter-bar-btn-reset-item">
+    <button type="button" class="filter-bar-btn-reset">
+      <div class="filter-bar-btn-reset-content">
+        <svg class="filter-bar-icon-reset">
+          <use xlink:href="./images/icons.svg#icon-reset-close"></use>
+        </svg>
+        <span class="filter-bar-btn-reset-description">Reset the filter</span>
+      </div>
+    </button>
   </div>
-
 </div>
