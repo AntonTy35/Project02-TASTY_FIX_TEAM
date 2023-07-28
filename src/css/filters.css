@@ -540,11 +540,11 @@
   cursor: pointer;
 }
 
-/* @media screen and (min-width: 768px) {
-  .filter-bar-btn-reset {
-    margin-left: 0px;
+@media screen and (min-width: 1200px) {
+  .filter-bar-btn-reset-item {
+    flex-basis: auto;
   }
-} */
+}
 
 .filter-bar-icon-reset {
   width: 16px;
