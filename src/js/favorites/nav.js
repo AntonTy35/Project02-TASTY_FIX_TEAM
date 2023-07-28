@@ -1,6 +1,8 @@
 import { isDataValid, pullDataFromLocalStroage } from './data';
 import renderFavorites from './render';
 
+favorites = pullDataFromLocalStroage('favorites');
+
 export function previousPage() {
   if (currentPage > 1) {
     currentPage--;
@@ -9,8 +11,6 @@ export function previousPage() {
 }
 
 export function nextPage() {
-  favorites = pullDataFromLocalStroage('favorites');
-
   if (currentPage * pageSize < favorites.length) {
     currentPage++;
     renderFavorites(currentPage);
@@ -18,8 +18,6 @@ export function nextPage() {
 }
 
 export function numberOfPages() {
-  favorites = pullDataFromLocalStroage('favorites');
-
   if (!isDataValid(favorites)) {
     return 0;
   }

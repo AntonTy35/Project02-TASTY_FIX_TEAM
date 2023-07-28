@@ -1,91 +1,95 @@
 .hero_fav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+
+@media screen and (max-width: 767px) {
+  .fav_container {
+    padding-top: 52px;
+    margin-bottom: 25px;
+  }
+
+  .hero_fav {
+    width: 335px;
+    height: 516px;
+
     margin: 0 auto;
+    background: url('../../src/images/favorites/card335px-mob@1x.webp');
+    background-size: cover;
   }
-  
-  @media screen and (max-width: 767px) {
-    .fav_container {
-      padding-top: 52px;
-    }
-  
-    .hero_fav {
-      width: 335px;
-      height: 516px;
-  
-      margin: 0 auto;
-      background: url('../../src/images/favorites/card335px-mob@1x.webp');
-      background-size: cover;
-    }
+}
+
+@media screen and (max-width: 767px) and (max-device-pixel-ratio: 2) and (-webkit-max-device-pixel-ratio: 2) and (max-resolution: 192dpi) and (max-resolution: 2dppx) {
+  .hero_fav {
+    width: 335px;
+    height: 516px;
+
+    margin: 0 auto;
+    background: url('../../src/images/favorites/card670px-mob@2x.webp');
+    background-size: cover;
   }
-  
-  @media screen and (max-width: 767px) and (max-device-pixel-ratio: 2) and (-webkit-max-device-pixel-ratio: 2) and (max-resolution: 192dpi) and (max-resolution: 2dppx) {
-    .hero_fav {
-      width: 335px;
-      height: 516px;
-  
-      margin: 0 auto;
-      background: url('../../src/images/favorites/card670px-mob@2x.webp');
-      background-size: cover;
-    }
+}
+
+@media screen and (min-width: 768px) {
+  .fav_container {
+    padding-top: 50px;
   }
-  
-  @media screen and (min-width: 768px) {
-    .fav_container {
-      padding-top: 50px;
-    }
-    .hero_fav {
-      width: 704px;
-      height: 356px;
-      background: url('../../src/images/favorites/card704px-tab@1x.webp');
-      background-size: cover;
-    }
+  .hero_fav {
+    width: 704px;
+    height: 356px;
+    background: url('../../src/images/favorites/card704px-tab@1x.webp');
+    background-size: cover;
   }
-  
-  @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) and (min-resolution: 2dppx) {
-    .hero_fav {
-      width: 704px;
-      height: 356px;
-      background: url('../../src/images/favorites/card1408px-tab@2x.webp');
-      background-size: cover;
-    }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) and (min-resolution: 2dppx) {
+  .hero_fav {
+    width: 704px;
+    height: 356px;
+    background: url('../../src/images/favorites/card1408px-tab@2x.webp');
+    background-size: cover;
   }
-  
-  @media screen and (min-width: 1280px) {
-    .fav_container {
-      padding-top: 40px;
-    }
-  
-    .hero_fav {
-      width: 1080px;
-      height: 356px;
-      background: url('../../src/images/favorites/card1080px-desk@1x.webp');
-      background-size: cover;
-    }
+}
+
+@media screen and (min-width: 1280px) {
+  .fav_container {
+    padding-top: 40px;
   }
-  
-  @media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) and (min-resolution: 2dppx) {
-    .hero_fav {
-      width: 1080px;
-      height: 356px;
-      background: url('../../src/images/favorites/card2160px-desk@2x.webp');
-      background-size: cover;
-    }
+
+  .hero_fav {
+    width: 1080px;
+    height: 356px;
+    background: url('../../src/images/favorites/card1080px-desk@1x.webp');
+    background-size: cover;
   }
-  
-  @media screen and (min-width: 1280px) {
-    .fav-hero {
-      width: 1080px;
-      height: 356px;
-      background: url('../../src/images/favorites/card1080px-desk@1x.webp');
-      background-size: cover;
-    }
+}
+
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) and (min-resolution: 2dppx) {
+  .hero_fav {
+    width: 1080px;
+    height: 356px;
+    background: url('../../src/images/favorites/card2160px-desk@2x.webp');
+    background-size: cover;
   }
-  
-  @media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) and (min-resolution: 2dppx) {
-    .fav-hero {
-      width: 1080px;
-      height: 356px;
-      background: url('../../src/images/favorites/card2160px-desk@2x.webp');
-      background-size: cover;
-    }
+}
+
+@media screen and (min-width: 1280px) {
+  .fav-hero {
+    width: 1080px;
+    height: 356px;
+    background: url('../../src/images/favorites/card1080px-desk@1x.webp');
+    background-size: cover;
   }
-  
+}
+
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) and (min-resolution: 2dppx) {
+  .fav-hero {
+    width: 1080px;
+    height: 356px;
+    background: url('../../src/images/favorites/card2160px-desk@2x.webp');
+    background-size: cover;
+  }
+}

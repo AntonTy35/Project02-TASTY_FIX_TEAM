@@ -8,9 +8,7 @@ function renderStars(rating) {
   console.log(rating);
 
   for (let i = rating; i >= 1; i--)
-    stars.push(
-      '<i class="fa fa-star" aria-hidden="true" style="color: gold;"></i>&nbsp;'
-    );
+    stars.push('<i class="fa fa-star star" aria-hidden="true" ></i>&nbsp;');
 
   stars = stars.join(' ');
 
@@ -18,15 +16,17 @@ function renderStars(rating) {
 }
 
 function favoritesPerPage(favorites) {
-  renderFavoritesPerPage = '';
+  let renderFavoritesPerPage = '';
 
-  let favoritesPerPage = favorites.filter((recipe, index) => {
-    let start = (currentPage - 1) * pageSize;
-    let end = currentPage * pageSize;
-    if (index >= start && index < end) return true;
+  const favoritesPerPage = favorites.filter((recipe, index) => {
+    console.log(`Recipe -> ${recipe.title}`);
+    const start = (currentPage - 1) * pageSize;
+    const end = currentPage * pageSize;
+    if (index >= start && index <= end) return true;
   });
-
+  console.log('favPerPage', favoritesPerPage);
   favoritesPerPage.forEach(recipe => {
+    console.log('pop', recipe);
     renderFavoritesPerPage += `<li class="favor-item">
     <img
       src=${recipe.preview}
@@ -39,7 +39,12 @@ function favoritesPerPage(favorites) {
       <h2 class="title-favor">${recipe.title}</h2>
       <p class="desc-favor">${recipe.description}</p>
       <div class="rating-btn-favor">
-        <p class="rating-favor">Rating: ${renderStars(recipe.popularity)}</p>
+        <p class="rating-favor">
+        
+        ${Math.round(recipe.popularity / 100)} <p></p> ${renderStars(
+      recipe.popularity
+    )}</p>
+       
         <btn class="btn-favor">See recipe</btn>
       </div>
     </div>
@@ -55,11 +60,14 @@ export default async function renderFavorites(page = 1) {
 
   const favorites = pullDataFromLocalStroage('favorites');
 
+  console.log(favorites);
+
   if (!isDataValid(favorites)) {
     document.getElementById('favorList').innerHTML =
-      '<li>LocalStorage is empty</li>';
+      '<li>It appears that you haven`t added any recipes to your favorites yet. To get started, you can add recipes that you like to your favorites for easier access in the future.</li>';
   } else {
-    renderedFavoritesPerPage = favoritesPerPage(favorites);
+    const renderedFavoritesPerPage = favoritesPerPage(favorites);
+    console.log(renderedFavoritesPerPage);
     document.getElementById('favorList').innerHTML = renderedFavoritesPerPage;
   }
 }

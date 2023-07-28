@@ -1,5 +1,5 @@
 import renderItem from '../renders/renders';
-import '/node_modules/tui-pagination/dist/tui-pagination.min.css'; 
+import '/node_modules/tui-pagination/dist/tui-pagination.min.css';
 import startPagination from './pagination';
 import { OpenModal } from './modal-recipes';
 import Notiflix from 'notiflix';
@@ -11,8 +11,6 @@ const refs = {
   paginationBox: document.getElementById('pagination'),
   allBtn: document.querySelector('.all-btn'),
 };
-
-
 
 let currentBtn = '';
 
@@ -40,14 +38,14 @@ const onFavoritesRealod = () => {
   refs.favoriteRecipesList.innerHTML = '';
   refs.favoriteCategoriesList.innerHTML = '';
 
-  const emptyStorage = document.querySelector('.empty-storage')
+  const emptyStorage = document.querySelector('.empty-storage');
 
   if (data.length) {
     refs.favoriteCategoriesList.innerHTML = `${allCatBtn}${categoryMarkup}`;
-emptyStorage.classList.toggle('is-hidden')
+    emptyStorage.classList.toggle('is-hidden');
   } else {
     refs.allBtn.style.display = 'none';
-    emptyStorage.classList.toggle('is-hidden')
+    emptyStorage.classList.toggle('is-hidden');
   }
 
   generateStorageList();
@@ -96,7 +94,7 @@ const generateCategoryList = () => {
   const data = JSON.parse(storage) || [];
   if (data.length) {
     return data
-      .flatMap((recipe) => recipe.category)
+      .flatMap(recipe => recipe.category)
       .filter((category, index, array) => array.indexOf(category) === index)
       .reduce(
         (categoryMarkup, category) => categoryMarkup + renderCategory(category),
@@ -106,20 +104,20 @@ const generateCategoryList = () => {
   return '';
 };
 
-const renderCategory = (category) => `<button class="button-fav">${category}</button>`;
+const renderCategory = category =>
+  `<button class="button-fav">${category}</button>`;
 
-const filterByCategory = (evt) => {
+const filterByCategory = evt => {
   if (evt.target.classList.contains('onActive')) return;
 
   let data = [];
   let categoryRecipes;
   refs.favoriteRecipesList.innerHTML = '';
 
-if (evt.target.name === 'details') {
+  if (evt.target.name === 'details') {
     const recipeId = evt.target.dataset.id;
     OpenModal(recipeId);
   }
-
 
   if (evt !== Number(evt) && evt.target.nodeName === 'BUTTON') {
     setActiveClass(evt);
@@ -135,7 +133,7 @@ if (evt.target.name === 'details') {
     return;
   }
 
-  categoryRecipes = [...data.filter((recipe) => recipe.category === currentBtn)];
+  categoryRecipes = [...data.filter(recipe => recipe.category === currentBtn)];
 
   let pageSet = 1;
 
@@ -161,7 +159,7 @@ if (evt.target.name === 'details') {
   refs.favoriteRecipesList.innerHTML = listMarkup;
 };
 
-const setActiveClass = (evt) => {
+const setActiveClass = evt => {
   const activeBtn = document.querySelector('.onActive');
   if (activeBtn) activeBtn.classList.remove('onActive');
   evt.target.classList.add('onActive');
@@ -170,5 +168,3 @@ const setActiveClass = (evt) => {
 document.addEventListener('DOMContentLoaded', onFavoritesRealod);
 
 refs.favoriteCategoriesList.addEventListener('click', filterByCategory);
-
-
