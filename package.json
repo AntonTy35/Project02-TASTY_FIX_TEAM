@@ -2,10 +2,10 @@
   "name": "parcel-project-template",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://AntonTy35.github.io/Project02-TASTY_FIX_TEAM",
+  "homepage": "https://EduardMLT.github.io/NEW_Project02",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /Project02-TASTY_FIX_TEAM/"
+    "build": "parcel build src/*.html --public-url /NEW_Project02/"
   },
   "repository": {
     "type": "git",

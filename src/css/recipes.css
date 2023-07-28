@@ -8,11 +8,12 @@
     margin-left: 32px;
 }
 
-/* .popular_plus_recipes {
+.popular_plus_recipes {
     display: flex;
-} */
+}
 
 .popular_all_recipes {
+    width: 782px;
     list-style: none;
     margin: 0;
     /* grid-gap: 30px;
@@ -34,9 +35,9 @@ position: relative;
 }
 
 .text_from_above {
-height: 220px;
+height: 240px;
 position: absolute;
-top: 5%;
+top: 15%;
 left: 10px;
 /* text-transform: uppercase; */
 color: white;
@@ -46,24 +47,103 @@ text-align: end;
 }
 
 .recipes_button_heart_from_above {
-  padding-bottom: 80px;
+  padding-bottom: 90px;
+  /* position: absolute; */
 }
+/*      ------------------------    */
 
-.recipes_button_heart {
+/* .recipes_button_heart {
   border: none;
-  background-color: rgb(220, 187, 187);
+  background-color: transparent;
   gap: 14px;
-  width: 28px;
+  width: 24px;
   height: 24px;
   cursor: pointer;
   color: #000;
-}
+  position: absolute;
+  right: 16px;
+ }
 
-.recipes_icon_heart {
-  /* margin-right: 14px; */
-  stroke: #000;
-  /* fill: currentColor; */
-}
+ .recipes_simple_herz {
+     width: 20px;
+     font-size: 18px;
+     display: inline-block;
+  }
+
+  .recipes_simple_herz:hover {
+     background-color: #000;
+  }
+
+  .recipes_simple_herz::before {
+  position: absolute;
+  content: "*";
+  color: transparent;
+  display: block;
+  background-image: url(../images/herz.svg);  
+  width: 24px;
+  height: 24px;
+  top: -36px;     
+  } */
+
+  /* з баттон
+      <button class="recipes_button_heart" type="button">
+                      <p class="recipes_simple_herz"></p>
+                  </button>
+  */
+
+        .rating_section_herz {
+            margin: 0 0 1em 0;
+            padding: 0;
+            border: none;
+        }
+                     
+        .rating__group_herz {
+            position: relative;
+            width: 2em;
+            height: 2em;
+            background-image: url(../images/herz_off.svg);
+            background-size: 2em auto;
+            background-repeat: repeat-x;
+            margin-left: 180px;
+            margin-top: -35px;
+            left: 0;    
+            top: 0;
+        }
+
+        .rating__herz:nth-of-type(1) {
+            z-index: 1;
+            width: 2em;
+        } 
+
+        .rating__herz {
+            /* position: absolute; */
+            top: 0;
+            left: 0;
+            margin: 0;
+            height: 2em;
+            font-size: inherit;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-size: 2em auto;
+            background-repeat: repeat-x;
+        }
+
+        .rating__herz:focus {
+            outline: none;
+        }
+
+        .rating__herz:hover,
+        .rating__herz:checked {
+            background-image: url(../images/herz_on.svg);
+        }
+
+        .rating__herz:hover ~ .rating__herz {
+            background-image: url(../images/herz_off.svg);
+        }        
+
+
+/*    ------------------------     */
 
 .text_from_above_title {
    text-align: left;
@@ -123,15 +203,16 @@ text-align: end;
   width: 218px;
   height: 31px;
   justify-content: flex-end;
+  position: relative;
 }
 
-.recipes_btn_reting {
+/* .recipes_btn_reting {
   text-align: left;
    width: 116px;
   height: 18px;
   align-content: center;
   font-size: 24px;
-}
+} */
 
 .recipes_btn_see_recipe {
     width: 93px;
@@ -156,16 +237,99 @@ text-align: end;
      color: #F8F8F8;
   }
 
-  .recipes_simple_reting {
-     /* position: relative; */
-     font-size: 40px;
-     display: inline-block;
+   /*  ---------- *** ----------- */
+
+  /* .recipes_simple_reting {     
+     font-size: 18px;
+     display: inline-block;     
   }
 
   .recipes_simple_reting::before {
     position: absolute;
   content: "*****";
+  color: transparent;
   display: block;
-  top: 85%;
-  left: 0;
-  }
+  top: 3%;
+  left: -5px;
+  background-image: url(../images/off.svg);  
+  background-color: transparent;
+  width: 96px;
+  } */
+
+  /*  був з ,,,,
+  <div class="recipes_simple_reting"><div>
+   */
+
+
+  /*  -------   *****   ------------ */
+
+  .rating_section_star {
+            margin: 0 0 1em 0;
+            padding: 0;
+            border: none;
+        }
+                     
+        .rating__group_star {
+            position: relative;
+            width: 5em;
+            height: 2em;
+            background-image: url(../images/off.svg);
+            background-size: 1em auto;
+            background-repeat: repeat-x;
+            /* margin-left: 50px;
+            margin-top: 50px; */
+            top: 7px;
+            left: -50px;
+        }
+
+        .rating__star:nth-of-type(1) {
+            z-index: 5;
+            width: 1em;
+        }
+
+        .rating__star:nth-of-type(2) {
+            z-index: 4;
+            width: 2em;
+        }
+
+        .rating__star:nth-of-type(3) {
+            z-index: 3;
+            width: 3em;
+        }
+
+        .rating__star:nth-of-type(4) {
+            z-index: 2;
+            width: 4em;
+        }
+
+        .rating__star:nth-of-type(5) {
+            z-index: 1;
+            width: 5em;
+        }
+
+        .rating__star {
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 0;
+            height: 2em;
+            font-size: inherit;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-size: 1em auto;
+            background-repeat: repeat-x;
+        }
+
+        .rating__star:focus {
+            outline: none;
+        }
+
+        .rating__star:hover,
+        .rating__star:checked {
+            background-image: url(../images/on.svg);
+        }
+
+        .rating__star:hover ~ .rating__star {
+            background-image: url(../images/off.svg);
+        } 
