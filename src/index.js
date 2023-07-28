@@ -9,7 +9,7 @@ import './js/home/cards';
 import './js/home/pagination';
 import './js/home/scroll-up';
 import './js/home/addToFavorites';
-// import './js/home/localStorage';
+import './js/home/localStorage';
 import './js/modal-banana-pancakes';
 import './js/modal-rating';
 import './js/modal-order-now';
