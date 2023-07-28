@@ -19,6 +19,7 @@ function favoritesPerPage(favorites) {
   let renderFavoritesPerPage = '';
 
   const favoritesPerPage = favorites.filter((recipe, index) => {
+    console.log(`Recipe -> ${recipe.title}`);
     const start = (currentPage - 1) * pageSize;
     const end = currentPage * pageSize;
     if (index >= start && index <= end) return true;
@@ -56,7 +57,10 @@ function favoritesPerPage(favorites) {
 export default async function renderFavorites(page = 1) {
   showPrevButton(page);
   showNextButton(page);
+
   const favorites = pullDataFromLocalStroage('favorites');
+
+  console.log(favorites);
 
   if (!isDataValid(favorites)) {
     document.getElementById('favorList').innerHTML =

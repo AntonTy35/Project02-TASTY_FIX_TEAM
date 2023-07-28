@@ -7,8 +7,7 @@ BASE_URL = 'https://tasty-treats-backend.p.goit.global/api';
 currentPage = 1;
 pageSize = mobile ? 9 : 12;
 
-getFavoritesRecipes();
-
+// getFavoritesRecipes();
 renderFavorites();
 
 document

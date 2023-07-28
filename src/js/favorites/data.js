@@ -2,15 +2,15 @@ import { CLASS_PAGINATION } from '@splidejs/splide';
 import axios from 'axios';
 
 // Comment out start
-export async function getData() {
-  const response = await axios.get(`${BASE_URL}/recipes/popular`);
-  return response.data;
-}
+// export async function getData() {
+//   const response = await axios.get(`${BASE_URL}/recipes/popular`);
+//   return response.data;
+// }
 
-export async function getFavoritesRecipes() {
-  const favoriteRecipes = await getData();
-  pushDataToLocalStorage('favorites', favoriteRecipes);
-}
+// export async function getFavoritesRecipes() {
+//   const favoriteRecipes = await getData();
+//   pushDataToLocalStorage('favorites', favoriteRecipes);
+// }
 // Comment out end
 
 function pushDataToLocalStorage(key, data) {
