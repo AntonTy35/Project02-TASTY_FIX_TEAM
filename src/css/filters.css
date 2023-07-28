@@ -1,137 +1,555 @@
-/* .filter-bar-input {
-  position: relative;
-  display: inline-block;
+.time-area {
+  display: flex;
+  flex-direction: row;
 }
-.filter-bar-input-search {
-  padding-left: 30px;
-}
-
-.filter-bar-input-search-icon {
-  width: 18px;
-  height: 18px;
-  position: absolute;
-  left: 18px;
-  top: 50%;
-  transform: translateY(-50%);
-  fill: #050505;
-} */
-/* Стилі для скроллу */
-::-webkit-scrollbar {
-  width: 6px;
+.filter-bar-btn-reset {
+  display: flex;
+  gap: 4px;
+  margin-left: auto;
 }
 
-::-webkit-scrollbar-track {
-  background: transparent;
-  margin-top: 8px;
-  margin-bottom: 8px;
-  border-radius: 12px;
+@media screen and (min-width: 768px) {
+  .all-inputs {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .time-label,
+  .area-label,
+  .ingredient-label {
+    display: flex;
+    flex-direction: column;
+    height: 48px;
+    width: 188px;
+    gap: 10px;
+  }
 }
 
-::-webkit-scrollbar-thumb {
-  background: rgba(5, 5, 5, 0.1);
-  border-radius: 12px;
+@media screen and (min-width: 1200px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  body::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    border-radius: 12px;
+    border: 2px solid var(--light-color);
+    background: rgba(5, 5, 5, 0.18);
+    transition: 250ms;
+  }
+
+  body.dark-theme::-webkit-scrollbar-thumb {
+    border: 2px solid var(--dark-color);
+    background: rgba(255, 255, 255, 0.2);
+    transition: 250ms;
+  }
+
+  body::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+    transition: 250ms;
+  }
+
+  .gallery-container {
+    width: 782px;
+  }
+
+  .container {
+    width: 1080px;
+    overflow: visible;
+  }
+
+  .gallery-filters {
+    width: 1280px;
+  }
+}
+:root {
+  --primary-color: #9bb537;
+  --light-color: #f8f8f8;
+  --dark-color: #161616;
+  --white-color: #ffffff;
+  --black-color: #050505;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
-/* Стилі для інпута пошуку */
-.filter-bar-search-item {
-  position: relative;
-  display: inline-block;
-  margin-top: 8px;
-}
-
-.filter-bar-search-input {
-  padding-left: 48px;
+/* .search-container {
   width: 335px;
+  display: flex;
+  flex-wrap: wrap;
+  background: var(--light-color);
+  transition: 250ms;
+} */
+
+/* .dark-theme .search-container {
+  background: var(--dark-color);
+  transition: 250ms;
+} */
+
+.filters-span {
+  display: block;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  margin-bottom: 8px;
+  color: rgba(5, 5, 5, 0.5);
+  transition: 250ms;
+}
+
+.dark-theme .filters-span,
+.dark-theme .search-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  transition: 250ms;
+}
+
+.search-label {
+  position: relative;
+  width: 100%;
+  margin-bottom: 14px;
+}
+
+.search-input {
+  color: var(--black-color);
+  width: 100%;
   height: 46px;
-  border-radius: 15px;
+  padding: 14px 48px;
+  background: transparent;
   border: 1px solid rgba(5, 5, 5, 0.2);
+  border-radius: 15px;
+  transition: 250ms;
 }
 
-.filter-bar-search-input:focus,
-.filter-bar-search-input:focus-visible {
-  border: 1px solid #050505;
+.dark-theme .search-input {
+  color: var(--white-color);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: 250ms;
 }
 
-.filter-bar-search-input::placeholder {
-  color: rgb(5, 5, 5);
-  opacity: 0.5;
+.search-input:focus {
+  outline: 0;
+}
+
+.search-input::placeholder {
+  margin-bottom: 14px;
+  font-weight: 500;
   font-size: 14px;
-  line-height: calc(18 / 14);
+  line-height: 18px;
+  color: rgba(5, 5, 5, 0.5);
+  transition: 250ms;
 }
 
-.filter-bar-input-search-icon {
-  width: 18px;
-  height: 18px;
+.search-icon {
   position: absolute;
   left: 18px;
-  top: 50%;
-  transform: translateY(-50%);
-  fill: #050505;
-  opacity: 0.5;
+  top: 36px;
+  fill: rgba(5, 5, 5, 0.5);
+  transition: 250ms;
 }
 
-/* Стилі для всіх селектів */
-.filter-bar-select {
-  padding-left: 14px;
-  border-radius: 15px;
+.search-icon.active,
+.dark-theme .search-icon.active {
+  fill: var(--primary-color);
+}
+
+.dark-theme .search-icon {
+  fill: rgba(255, 255, 255, 0.5);
+  transition: 250ms;
+}
+
+.reset-btn {
+  display: none;
+  position: absolute;
+  top: 36px;
+  right: 15px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  background: inherit;
+  border: 0;
+}
+
+.close-search-icon {
+  stroke: #9bb537;
+  transition: 250ms;
+  fill: var(--primary-color-btn);
+}
+
+.dark-theme .close-search-icon {
+  stroke: var(--white-color);
+  transition: 250ms;
+}
+
+/* ####### filters ####### */
+
+.time-label,
+.area-label,
+.ingredient-label {
+  display: flex;
+  flex-direction: column;
+  height: 68px;
+  gap: 10px;
+}
+
+.time-label {
+  width: 160px;
+  margin-right: 14px;
+  margin-bottom: 14px;
+}
+
+.area-label {
+  width: 161px;
+}
+
+.ingredient-label {
+  width: 188px;
+}
+
+.dark-theme .time-input,
+.dark-theme .area-input,
+.dark-theme .ingredient-input {
+  color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: 250ms;
+}
+
+.time-input,
+.area-input,
+.ingredient-input {
+  position: relative;
+  display: flex;
   height: 46px;
   border: 1px solid rgba(5, 5, 5, 0.2);
-  opacity: 0.5;
+  border-radius: 15px;
   cursor: pointer;
-  margin-top: 8px;
-  width: 158px;
+  transition: 250ms;
 }
 
-/* Стилі для селекта часу */
-.filter-bar-time-select {
-  /* Тут можна додаткові стилі, якщо потрібно відрізняти від загальних селектів */
+.time-input {
+  width: 160px;
 }
 
-/* Стилі для селекта зони та інгредієнтів */
-.filter-bar-area-select,
-.filter-bar-ingrs-select {
+.area-input {
   width: 161px;
-  /* Тут можна додаткові стилі, якщо потрібно відрізняти від загальних селектів */
 }
 
-/* Стилі для випадаючого вікна селектів */
-.ss-content.filter-bar-select.ss-open-below {
-  height: 188px;
-  background-color: rgb(255, 255, 255);
-  border-radius: 14px;
-  border: transparent;
+.ingredient-input {
+  width: 188px;
 }
 
-.ss-content .ss-list {
-  margin-right: 6px;
+.time-placeholder,
+.area-placeholder,
+.ingredient-placeholder {
+  padding-left: 18px;
+  width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(5, 5, 5, 0.5);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  overflow: hidden;
+  transition: 250ms;
 }
 
-.ss-content .ss-list .ss-option {
+.dark-theme .time-placeholder,
+.dark-theme .area-placeholder,
+.dark-theme .ingredient-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  transition: 250ms;
+}
+
+.time-placeholder.active,
+.area-placeholder.active,
+.ingredient-placeholder.active,
+.time-placeholder:hover,
+.area-placeholder:hover,
+.ingredient-placeholder:hover {
+  color: var(--black-color);
+  transition: 250ms;
+}
+
+.dark-theme .time-placeholder.active,
+.dark-theme .area-placeholder.active,
+.dark-theme .ingredient-placeholder.active,
+.dark-theme .time-placeholder:hover,
+.dark-theme .area-placeholder:hover,
+.dark-theme .ingredient-placeholder:hover {
+  color: var(--white-color);
+  transition: 250ms;
+}
+
+.time-placeholder:focus,
+.area-placeholder:focus,
+.ingredient-placeholder:focus {
+  outline: none;
+  background-color: transparent;
+}
+
+.select-icon {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  fill: transparent;
+  stroke: rgba(5, 5, 5, 0.5);
+  transition: 250ms;
+}
+
+.time-icon.active,
+.area-icon.active,
+.ingredient-icon.active {
+  transform: rotate(180deg);
+  transition: 250ms;
+}
+
+.dark-theme .select-icon {
+  stroke: rgba(255, 255, 255, 0.5);
+  transition: 250ms;
+}
+
+.time-list,
+.area-list,
+.ingredient-list {
+  position: absolute;
+  top: 46px;
+  left: -1px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  overflow-y: scroll;
+  background: var(--white-color);
+  border-radius: 8px;
+  opacity: 0;
+  pointer-events: none;
+  transition: 250ms;
+}
+
+.dark-theme .time-list,
+.dark-theme .area-list,
+.dark-theme .ingredient-list {
+  background: var(--black-color);
+  transition: 250ms;
+}
+
+.time-list.active,
+.area-list.active,
+.ingredient-list.active {
+  opacity: 1;
+  pointer-events: auto;
+  transition: 250ms;
+}
+
+.time-list {
+  width: 160px;
+  height: 124px;
+}
+
+.area-list {
+  width: 161px;
+  height: 176px;
+}
+
+.ingredient-list {
+  width: 188px;
+  height: 176px;
+}
+
+.time-list::-webkit-scrollbar,
+.area-list::-webkit-scrollbar,
+.ingredient-list::-webkit-scrollbar {
+  width: 14px;
+}
+
+.time-list::-webkit-scrollbar-thumb,
+.area-list::-webkit-scrollbar-thumb,
+.ingredient-list::-webkit-scrollbar-thumb {
+  height: 69px;
+  border-radius: 12px;
+  background: rgba(5, 5, 5, 0.1);
+  border: 4px solid var(--white-color);
+}
+
+.dark-theme .time-list::-webkit-scrollbar-thumb,
+.dark-theme .area-list::-webkit-scrollbar-thumb,
+.dark-theme .ingredient-list::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border: 4px solid var(--black-color);
+}
+
+.time-list::-webkit-scrollbar-thumb:hover,
+.area-list::-webkit-scrollbar-thumb:hover,
+.ingredient-list::-webkit-scrollbar-thumb:hover {
+  background: var(--black-color);
+}
+
+.dark-theme .time-list::-webkit-scrollbar-thumb:hover,
+.dark-theme .area-list::-webkit-scrollbar-thumb:hover,
+.dark-theme .ingredient-list::-webkit-scrollbar-thumb:hover {
+  background: var(--white-color);
+}
+
+.area-list::-webkit-scrollbar-thumb {
+  height: 55px;
+}
+
+/* ####### filters.js ####### */
+
+.time-item,
+.area-item,
+.ingredient-item {
+  padding-top: 8px;
+  padding-left: 18px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: left;
+  cursor: pointer;
+  border: none;
   color: rgba(5, 5, 5, 0.3);
+  background: transparent;
 }
 
-.ss-content .ss-list .ss-option:hover,
-.ss-content .ss-list .ss-option:focus {
-  color: rgb(5, 5, 5);
-  background-color: transparent;
+.dark-theme .time-item,
+.dark-theme .area-item,
+.dark-theme .ingredient-item {
+  color: rgba(255, 255, 255, 0.3);
 }
 
-.ss-content .ss-list .ss-option.ss-highlighted,
-.ss-content .ss-list .ss-option:not(.ss-disabled).ss-selected {
-  color: #050505;
-  background-color: transparent;
+.time-item:hover,
+.area-item:hover,
+.ingredient-item:hover {
+  color: var(--black-color);
 }
 
-.ss-content .ss-search input {
-  /* Тут можна задавати стилі для пошукового інпуту */
+.dark-theme .time-item:hover,
+.dark-theme .area-item:hover,
+.dark-theme .ingredient-item:hover {
+  color: var(--white-color);
 }
 
-.ss-main .ss-values .ss-single {
-  color: rgb(5, 5, 5);
+@media screen and (min-width: 768px) {
+  .search-container {
+    width: 495px;
+    height: 164px;
+  }
+
+  .search-label {
+    width: 278px;
+    height: 74px;
+    margin-right: 16px;
+  }
+
+  .search-input::placeholder,
+  .time-placeholder,
+  .area-placeholder,
+  .ingredient-placeholder {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .time-label {
+    width: 125px;
+    height: 74px;
+  }
+
+  .area-label {
+    width: 141px;
+    height: 74px;
+    margin-right: 16px;
+  }
+
+  .ingredient-label {
+    width: 188px;
+    height: 74px;
+  }
+
+  .filters-span {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .search-input,
+  .time-input,
+  .area-input,
+  .ingredient-input {
+    width: 100%;
+    height: 48px;
+  }
+
+  .search-icon {
+    left: 18px;
+    top: 42px;
+  }
+  .reset-btn {
+    top: 42px;
+  }
+
+  .time-list,
+  .area-list,
+  .ingredient-list {
+    width: 100%;
+    top: 48px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .search-container {
+    width: 780px;
+    height: 74px;
+  }
+
+  .time-label {
+    margin-right: 16px;
+  }
+}
+/* ////////////////// */
+
+@media screen and (min-width: 1200px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  body::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    border-radius: 12px;
+    border: 2px solid var(--light-color);
+    background: rgba(5, 5, 5, 0.18);
+    transition: 250ms;
+  }
+
+  body.dark-theme::-webkit-scrollbar-thumb {
+    border: 2px solid var(--dark-color);
+    background: rgba(255, 255, 255, 0.2);
+    transition: 250ms;
+  }
+
+  body::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+    transition: 250ms;
+  }
+
+  .gallery-container {
+    width: 782px;
+  }
+
+  .container {
+    width: 1080px;
+    overflow: visible;
+  }
+
+  .gallery-filters {
+    width: 1280px;
+  }
 }
 
 /* Стилі для кнопки "Reset" */
@@ -144,39 +562,16 @@
 .filter-bar-icon-reset {
   width: 16px;
   height: 16px;
-  fill: #9bb537;
+  fill: var(--primary-color-btn);
 }
 
 .filter-bar-btn-reset-description {
-  margin-left: 4px;
   font-size: 12px;
   line-height: calc(16 / 12);
-  color: rgba(5, 5, 5, 0.5);
+  color: var(--primary-text-color-05);
 }
 
 .filter-bar-btn-reset-content {
   display: flex;
   align-items: center;
-}
-
-/* Стилі для обгортки .filter-bar */
-.filter-bar {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: 14px;
-}
-
-.filter-bar-label {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  font-size: 12px;
-  line-height: calc(14 / 12);
-  color: #050505;
-  opacity: 0.5;
-}
-
-.filter-bar-label:not(:last-child) {
-  margin-bottom: 8px;
 }
