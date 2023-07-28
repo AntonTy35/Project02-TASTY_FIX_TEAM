@@ -1,5 +1,9 @@
 import { markUpRating } from './modal-rating';
-// import localctorage from './localctorage';
+
+import { renderStars } from '../js/favorites/render';
+
+// import localStorage from './home/addToFavorites.js';
+
 // import { KEY } from './addToFavorites';
 // import { addToFavorites, removeFromFavorites } from './addToFavorites';
 // Всі посилання
@@ -24,7 +28,6 @@ let refs = {
   removeFromFavoriteBtn: document.querySelector('.js-removeFromFavorite-btn'),
 };
 
-let recipeId;
 // Запуск по кліку
 setTimeout(() => {
   finallInitPage('6462a8f74c3d0ddd28897fc1');
