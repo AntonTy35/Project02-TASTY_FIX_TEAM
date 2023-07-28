@@ -34,7 +34,7 @@
  /* width: 335px; */
 
   color: var(--primary-text-color-01);
-  font-family: Regular;
+  font-style: regular;
   font-size: 14px;
   line-height: 18px;
   letter-spacing: 0.02em;
@@ -52,7 +52,7 @@
   font-family: Medium;
   font-size: 14px;
 
-
+  cursor: pointer;
   color: var(--primary-text-color-01);
   background-color: transparent;
   border: 1px solid var(--primary-color-btn);

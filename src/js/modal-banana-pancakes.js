@@ -1,7 +1,9 @@
 import { markUpRating } from './modal-rating';
+
 import { renderStars } from '../js/favorites/render';
 
 // import localStorage from './home/addToFavorites.js';
+
 // import { KEY } from './addToFavorites';
 // import { addToFavorites, removeFromFavorites } from './addToFavorites';
 // Всі посилання
@@ -27,9 +29,9 @@ let refs = {
 };
 
 // Запуск по кліку
-// setTimeout(() => {
-//   finallInitPage('6462a8f74c3d0ddd28897fc1');
-// }, 2000);
+setTimeout(() => {
+  finallInitPage('6462a8f74c3d0ddd28897fc1');
+}, 2000);
 
 // /** Відкриття та закриття модального вікна */
 
